@@ -1,5 +1,5 @@
 const Hero = () => (
-  <section className="hero-section">
+  <section id="hero" className="hero-section">
     <div className="section-container hero-container">
       <div className="hero-left">
         <div className="hero-title-row">
@@ -9,7 +9,7 @@ const Hero = () => (
         <p className="body-large">I turn ideas into engaging, responsive websites — with a designer’s eye and a developer’s mind.</p>
       </div>
       <div className="hero-right">
-        <img src="/Hero.jpg" alt="Hero" className="hero-image" />
+        <img src="/Hero.png" alt="Hero" className="hero-image" />
       </div>
     </div>
   </section>

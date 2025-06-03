@@ -14,6 +14,8 @@
   --font-heading: 'DM Serif Display', serif;
   --font-body: 'Nunito', sans-serif;
   --font-button: 'Poppins', sans-serif;
+
+  --container-padding: 24px;
 }
 
 
@@ -26,39 +28,54 @@ body {
 
 
 /* 通用内容容器 */
-.section-container {
+section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+section:first-of-type {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  section {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+}
+
+.section-container,
+.navbar-container {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   max-width: 1100px;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 @media (min-width: 768px) {
-  .section-container {
+  .section-container,
+  .navbar-container {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
 @media (min-width: 1200px) {
-  .section-container {
+  .section-container,
+  .navbar-container {
     padding-left: 48px;
     padding-right: 48px;
   }
 }
 
 /* Navbar */
-.navbar {
-  padding: 40px 0;
-}
 
 .navbar-container {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding-left: 60px;
-  padding-right: 60px;
   align-items: center;
+  padding-top: 10px;
 }
 
 
@@ -169,7 +186,6 @@ body {
 .hero-image {
   max-width: 100%;
   height: auto;
-  /* Remove width: 70%; unless you want a specific size */
 }
 
 .hero-title-row {
@@ -194,13 +210,15 @@ body {
   text-align: center;
   padding: 18px 0;
   font-family: var(--font-heading);
-  color: #ffff;
+  background-color: var(--color-primary);
+  color: var(--color-accent2);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
 
 .segment.active {
   font-weight: 300;
+  background-color: var(--color-primary-light);;
 }
 
 .segment-divider {
@@ -215,9 +233,6 @@ body {
 
 
 
-/* Project Cards */
-
-
 /* Projects Grid 布局 */
 .projects-grid {
   display: grid;
@@ -227,6 +242,8 @@ body {
   justify-content: center;
 }
 
+
+
 /* Project Card 毛玻璃效果 */
 .project-card {
   position: relative;
@@ -235,7 +252,7 @@ body {
   background:
     linear-gradient(135deg, rgba(247, 217, 168, 0.10) 0%, rgba(247, 217, 168, 0.40) 100%),
     url('/noise.png'); /* 叠加噪点纹理 */
-  background-size: cover, cover; /* 或 background-size: 100% 100%, auto; */
+  background-size: cover, cover;
   border-radius: 50px;
   overflow: hidden;
   /* drop shadow */
@@ -248,7 +265,7 @@ body {
   flex-direction: column;
   align-items: center;
   transition: background 0.3s, box-shadow 0.3s;
-  width: 100%; /* 让卡片宽度由 grid 决定 */
+  width: 100%; 
   max-width: none;
 }
 
@@ -410,14 +427,7 @@ body {
       margin-bottom: 40px;
     }
   }
-
-
- 
 }
-
-
-
-
 
 
 
@@ -431,3 +441,59 @@ body {
   font-size: 1rem;
   letter-spacing: 0.5px;
 }
+
+
+
+
+
+
+
+/* Balls Background */
+.balls-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+
+/* back to top */
+.back-to-top {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  background: var(--color-primary);        
+  color: var(--color-accent2);            
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(123, 111, 111, 0.15);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.2s, box-shadow 0.2s, opacity 0.3s;
+  opacity: 0.5;
+  outline: none;
+  border: 2px solid var(--color-accent2);
+}
+
+.back-to-top:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  opacity: 1;
+  box-shadow: 0 8px 24px rgba(123, 111, 111, 0.22);
+}
+
+.back-to-top svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+

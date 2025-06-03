@@ -1,6 +1,6 @@
 const Contact = () => (
   <>
-  <section className="contact-section">
+  <section id="contact" className="contact-section">
     <div className="contact-container section-container">
       <div className="contact-left">
         <h2 className="heading-h2">Let's Connect</h2>
@@ -46,7 +46,7 @@ const Contact = () => (
 
   <footer className="footer">
     <p>
-      Created with heart by Yiting Zhang © {new Date().getFullYear()}
+      Created with 🤍 by Yiting Zhang © 2025
     </p>
   </footer>
 </>
