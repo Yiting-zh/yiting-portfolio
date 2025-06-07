@@ -1,7 +1,7 @@
 const Navbar = () => (
   <nav className="navbar">
     <div className="section-container navbar-container">
-      <img src="/Logo.svg" alt="Logo" className="navbar-logo" style={{ height: "40px" }} />
+      <img src="/Logo.svg" alt="Logo" className="navbar-logo" id="navbar-logo" />
       <div className="navbar-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>

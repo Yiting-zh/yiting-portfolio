@@ -2,22 +2,22 @@ import { useState } from "react";
 
 const projects = [
 	{
-		name: "Genesis Portfolio",
+		name: "Yiting Portfolio",
 		image: "/genesis-portfolio.jpg",
-		tech: "HTML, CSS, SCSS",
-		description: "Recreate the Figma file for Genesis portfolio.",
+		tech: "UX/UI, HTML, CSS, JavaScript, React",
+		description: " Yiting portfolio.",
 		learnings:
 			"Learned how to structure a project, use Sass, basic validation, and responsive design.",
 		role: "Solo Project",
 		challenges:
 			"Attention to detail in HTML/SCSS structure and form validation.",
-		viewLive: "https://yiting-zh.github.io/genesis-portfolio-design/",
-		github: "https://github.com/Yiting-zh/genesis-portfolio-design",
+		viewLive: "https://yiting-zh.github.io/yiting-portfolio-design/",
+		github: "https://github.com/Yiting-zh/yiting-portfolio-design",
 	},
 	{
 		name: "Bar website design",
 		image: "/bar-website.jpg",
-		tech: "html, css",
+		tech: "HTML, CSS",
 		description: "A website design for a bar.",
 		learnings: "Gained experience with flexbox, layout, and responsive design.",
 		role: "Team Project, Responsible for landing page design and implementation.",
@@ -26,26 +26,28 @@ const projects = [
 		github: "https://github.com/Yiting-zh/project2",
 	},
 	{
-		name: "Invitation Card",
-		image: "/invitation-card.jpg",
-		tech: "html, css",
-		description: "Designed a digital invitation card.",
-		learnings: "CSS styling and font hierarchy.",
-		role: "Solo Project",
+		name: "Hangman Game",
+		image: "/genesis-portfolio.jpg",
+		tech: "HTML, CSS, API，JavaScript",
+		description: "A classic Hangman game built with JavaScript.",
+		learnings: "Learned about game logic, DOM manipulation, and event handling.",
+		role: "Team Project",
 		challenges: "Precise visual layout matching the Figma design.",
 		viewLive: "#",
 		github: "https://github.com/Yiting-zh/project3",
 	},
 	{
-		name: "Invitation Card",
-		image: "/invitation-card.jpg",
-		tech: "html, css",
-		description: "Designed a digital invitation card.",
-		learnings: "CSS styling and font hierarchy.",
+		name: "Genesis Portfolio",
+		image: "/genesis-portfolio.jpg",
+		tech: "HTML, CSS, SASS, JavaScript",
+		description: "Recreate the Figma file for Genesis portfolio.",
+		learnings:
+			"Learned how to structure a project, use Sass, basic validation, and responsive design.",
 		role: "Solo Project",
-		challenges: "Precise visual layout matching the Figma design.",
-		viewLive: "#",
-		github: "https://github.com/Yiting-zh/project3",
+		challenges:
+			"Attention to detail in HTML/SCSS structure and form validation.",
+		viewLive: "https://yiting-zh.github.io/genesis-portfolio-design/",
+		github: "https://github.com/Yiting-zh/genesis-portfolio-design",
 	},
 ];
 
@@ -60,7 +62,7 @@ function Projects() {
 	};
 
 	return (
-		<section id="projects" className="projects-section">
+		<section id="projects" className="projects-section" data-aos="fade-up">
 			<div className="section-container">
 				<h2 className="heading-h2">My Works</h2>
 				<div className="segmented-control">
@@ -73,7 +75,6 @@ function Projects() {
 						Projects
 					</div>
 					<div className="segment-divider"></div>
-
 					<div
 						className={`segment ${
 							segment === "design" ? "active" : ""
@@ -87,7 +88,7 @@ function Projects() {
 					{segment === "projects" && (
 						<div className="projects-grid">
 							{projects.map((project) => (
-								<div className="project-card" key={project.name}>
+								<div className="project-card" data-aos="fade-up" key={project.name}>
 									<img src={project.image} alt={project.name} />
 									<div className="project-card-info">
 										<h3 className="heading-h3">{project.name}</h3>
@@ -95,14 +96,16 @@ function Projects() {
 									</div>
 									<div className="project-card-detail">
 										<p className="body-regular">
-											Description: {project.description}
+											<strong>Description: </strong>{project.description}
 										</p>
 										<p className="body-regular">
-											Learnings: {project.learnings}
+											<strong>Learnings: </strong>{project.learnings}
 										</p>
-										<p className="body-regular">Role: {project.role}</p>
 										<p className="body-regular">
-											Challenges: {project.challenges}
+											<strong>Role: </strong>{project.role}
+										</p>
+										<p className="body-regular">
+											<strong>Challenges: </strong>{project.challenges}
 										</p>
 										<div className="project-links">
 											<a
