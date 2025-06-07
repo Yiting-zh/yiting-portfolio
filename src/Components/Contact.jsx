@@ -9,12 +9,12 @@ const Contact = () => (
           </p>
           <div className="contact-links">
             <a href="https://www.linkedin.com/in/zhang-yiting" target="_blank" rel="noopener noreferrer" className="contact-icon-link">
-              <img src="linkedin-icon.png" alt="LinkedIn" className="contact-icon normal" />
-              <img src="linkedin-yellow-icon.png" alt="LinkedIn" className="contact-icon hover" />
+              <img src={`${import.meta.env.BASE_URL}linkedin-icon.png`} alt="LinkedIn" className="contact-icon normal" />
+              <img src={`${import.meta.env.BASE_URL}linkedin-yellow-icon.png`} alt="LinkedIn" className="contact-icon hover" />
             </a>
             <a href="https://github.com/Yiting-zh" target="_blank" rel="noopener noreferrer" className="contact-icon-link">
-              <img src="github-icon.png" alt="GitHub" className="contact-icon normal" />
-              <img src="github-yellow-icon.png" alt="GitHub" className="contact-icon hover" />
+              <img src={`${import.meta.env.BASE_URL}github-icon.png`} alt="GitHub" className="contact-icon normal" />
+              <img src={`${import.meta.env.BASE_URL}github-yellow-icon.png`} alt="GitHub" className="contact-icon hover" />
             </a>
           </div>
         </div>

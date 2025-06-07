@@ -36,7 +36,7 @@ const Loader = ({ onFinish }) => {
   return (
     <div className="loader-overlay">
       <img
-        src="/Logo.svg"
+        src={`${import.meta.env.BASE_URL}Logo.svg`}
         alt="Logo"
         className="loader-logo loader-logo-breath"
         ref={logoRef}

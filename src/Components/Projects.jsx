@@ -3,7 +3,7 @@ import { useState } from "react";
 const projects = [
 	{
 		name: "Yiting Portfolio",
-		image: "/genesis-portfolio.jpg",
+		image: `${import.meta.env.BASE_URL}genesis-portfolio.jpg`,
 		tech: "UX/UI, HTML, CSS, JavaScript, React",
 		description: " Yiting portfolio.",
 		learnings:
@@ -16,7 +16,7 @@ const projects = [
 	},
 	{
 		name: "Bar website design",
-		image: "/bar-website.jpg",
+		image: `${import.meta.env.BASE_URL}bar-website.jpg`,
 		tech: "HTML, CSS",
 		description: "A website design for a bar.",
 		learnings: "Gained experience with flexbox, layout, and responsive design.",
@@ -27,7 +27,7 @@ const projects = [
 	},
 	{
 		name: "Hangman Game",
-		image: "/genesis-portfolio.jpg",
+		image: `${import.meta.env.BASE_URL}genesis-portfolio.jpg`,
 		tech: "HTML, CSS, API，JavaScript",
 		description: "A classic Hangman game built with JavaScript.",
 		learnings: "Learned about game logic, DOM manipulation, and event handling.",
@@ -38,7 +38,7 @@ const projects = [
 	},
 	{
 		name: "Genesis Portfolio",
-		image: "/genesis-portfolio.jpg",
+		image: `${import.meta.env.BASE_URL}genesis-portfolio.jpg`,
 		tech: "HTML, CSS, SASS, JavaScript",
 		description: "Recreate the Figma file for Genesis portfolio.",
 		learnings:

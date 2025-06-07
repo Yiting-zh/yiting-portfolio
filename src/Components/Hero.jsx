@@ -11,7 +11,7 @@ const Hero = () => (
         </p>
       </div>
       <div className="hero-right" data-aos="fade-left" data-aos-delay="200">
-        <img src="/Hero.png" alt="Hero" className="hero-image" />
+        <img src={`${import.meta.env.BASE_URL}Hero.png`} alt="Hero" className="hero-image" />
       </div>
     </div>
   </section>
