@@ -2,7 +2,7 @@ const Hero = () => (
   <section id="hero" className="hero-section">
     <div className="section-container hero-container">
       <div className="hero-left">
-        <div className="hero-title-row" data-aos="fade-right">
+        <div className="hero-title-row hero-title-animate" data-aos="fade-right">
           <h1 className="display-hero">Hi,</h1>
           <p className="heading-h1" style={{ marginLeft: "24px" }}>I'm Yiting</p>
         </div>

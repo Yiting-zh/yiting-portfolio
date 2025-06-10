@@ -4,7 +4,7 @@
 
 :root {
   --color-bg: #FEF9F1;
-  --color-primary: #D5C4E0;
+  --color-primary: #b7aed2; /* 更深更有辨识度 */
   --color-primary-light: #fddd72;
   --color-text: #586B6A;
   --color-accent1: #F9D6C1;
@@ -32,7 +32,6 @@ section {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
 section:first-of-type {
   margin-top: 0;
 }
@@ -162,6 +161,7 @@ section:first-of-type {
   font-weight: 400;
   font-size: 18px;
   color: var(--color-text);
+  margin-top: 0; 
 }
 
 .caption-label {
@@ -218,8 +218,31 @@ section:first-of-type {
 
 .hero-title-row {
   display: flex;
-  align-items: baseline; /* 保证大字和小字底线对齐 */
+  align-items: baseline;
+  margin-bottom: 0; /* 或 4px，根据你喜欢的间距微调 */
 }
+
+/* 鼠标悬停时动画和颜色渐变 */
+.hero-title-animate:hover .display-hero,
+.hero-title-animate:hover .heading-h1 {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),   
+    #A3BFD9,           
+    #F6C89F,          
+    var(--color-primary-light), 
+    #E7A6A1,          
+    #C3B1E1           
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: heroBounce 0.5s cubic-bezier(.4,2,.6,1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
 
 /* Segmented Control 基础样式 */
 .segmented-control {
@@ -285,6 +308,16 @@ section:first-of-type {
   50% { transform: scale(1.08);}
   100% { transform: scale(1);}
 }
+
+/* 动画关键帧 */
+@keyframes heroBounce {
+  0% { transform: scale(1);}
+  30% { transform: scale(1.08) translateY(-8px);}
+  60% { transform: scale(0.96) translateY(2px);}
+  100% { transform: scale(1);}
+}
+
+
 
 
 
@@ -637,7 +670,7 @@ input:focus, textarea:focus {
 
 
 
-/* back to top */
+ /* back to top */
 .back-to-top {
   position: fixed;
   right: 32px;
