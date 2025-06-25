@@ -33,12 +33,12 @@ const projects = [
 		learnings: "Learned about game logic, DOM manipulation, and event handling.",
 		role: "Team Project",
 		challenges: "Precise visual layout matching the Figma design.",
-		viewLive: "#",
+		viewLive: "https://xositax.github.io/Hangman-Project/",
 		github: "https://github.com/Yiting-zh/project3",
 	},
 	{
 		name: "Genesis Portfolio",
-		image: `${import.meta.env.BASE_URL}genesis-portfolio.jpg`,
+		image: `${import.meta.env.BASE_URL}genesis-portfolio.gif`,
 		tech: "HTML, CSS, SASS, JavaScript",
 		description: "Recreate the Figma file for Genesis portfolio.",
 		learnings:
