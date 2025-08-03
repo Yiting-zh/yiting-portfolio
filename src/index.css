@@ -91,6 +91,8 @@ section:first-of-type {
   width: 100%;
 }
 
+
+
 /* Hamburger icon */
 .hamburger {
   display: none;
@@ -119,6 +121,9 @@ section:first-of-type {
 }
 .hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+.hamburger:hover span {
+  background: var(--color-primary-light);
 }
 
 

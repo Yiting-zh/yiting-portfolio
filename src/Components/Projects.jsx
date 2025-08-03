@@ -27,7 +27,7 @@ const projects = [
 	},
 	{
 		name: "Hangman Game",
-		image: `${import.meta.env.BASE_URL}genesis-portfolio.jpg`,
+		image: `${import.meta.env.BASE_URL}hangman.gif`,
 		tech: "HTML, CSS, API，JavaScript",
 		description: "A classic Hangman game built with JavaScript.",
 		learnings: "Learned about game logic, DOM manipulation, and event handling.",
@@ -51,7 +51,7 @@ const projects = [
 	},
 ];
 
-function Projects() {
+function Projects({ dict }) {
 	const [segment, setSegment] = useState("projects");
 	const handleSegmentClick = (type) => {
 		if (type === "design") {
@@ -64,7 +64,7 @@ function Projects() {
 	return (
 		<section id="projects" className="projects-section" data-aos="fade-up">
 			<div className="section-container">
-				<h2 className="heading-h2">My Works</h2>
+				<h2 className="heading-h2">{dict.myWorks}</h2>
 				<div className="segmented-control">
 					<div
 						className={`segment ${
@@ -72,7 +72,7 @@ function Projects() {
 						}`}
 						onClick={() => handleSegmentClick("projects")}
 					>
-						Projects
+						{dict.projects}
 					</div>
 					<div className="segment-divider"></div>
 					<div
@@ -96,16 +96,16 @@ function Projects() {
 									</div>
 									<div className="project-card-detail">
 										<p className="body-regular">
-											<strong>Description: </strong>{project.description}
+											<strong>{dict.description}: </strong>{project.description}
 										</p>
 										<p className="body-regular">
-											<strong>Learnings: </strong>{project.learnings}
+											<strong>{dict.learnings}: </strong>{project.learnings}
 										</p>
 										<p className="body-regular">
-											<strong>Role: </strong>{project.role}
+											<strong>{dict.role}: </strong>{project.role}
 										</p>
 										<p className="body-regular">
-											<strong>Challenges: </strong>{project.challenges}
+											<strong>{dict.challenges}: </strong>{project.challenges}
 										</p>
 										<div className="project-links">
 											<a
@@ -113,7 +113,7 @@ function Projects() {
 												target="_blank"
 												rel="noopener noreferrer"
 											>
-												View Live
+												{dict.viewLive}
 											</a>
 											<a
 												href={project.github}

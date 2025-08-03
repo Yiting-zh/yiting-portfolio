@@ -1,11 +1,11 @@
-const Contact = () => (
+const Contact = ({ dict }) => (
   <>
     <section id="contact" className="contact-section" data-aos="fade-up">
       <div className="contact-container section-container">
         <div className="contact-left" data-aos="fade-right">
-          <h2 className="heading-h2">Let's Connect</h2>
+          <h2 className="heading-h2">{dict.letsConnect}</h2>
           <p className="body-regular">
-            I’m always excited to connect with fellow developers, designers, and anyone who shares a passion for building great things. Whether you have a project in mind, want to collaborate, or just want to chat about tech, feel free to reach out!
+          {dict.connectMessage}
           </p>
           <div className="contact-links">
             <a href="https://www.linkedin.com/in/zhang-yiting" target="_blank" rel="noopener noreferrer" className="contact-icon-link">
@@ -22,11 +22,11 @@ const Contact = () => (
           <div className="contact-form">
             <form action="https://formspree.io/f/xpwrakyk" method="POST">
               <label>
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <textarea name="message" placeholder="Message" required></textarea>
+                <input type="text" name="name" placeholder={dict.name} required />
+                <input type="email" name="email" placeholder={dict.email} required />
+                <textarea name="message" placeholder={dict.message} required></textarea>
               </label>
-              <button type="submit" className="button-primary">Send Message</button>
+              <button type="submit" className="button-primary">{dict.send}</button>
             </form>
           </div>
         </div>

@@ -1,24 +1,19 @@
-const About = () => (
+const About = ({ dict }) => (
   <section id="about" className="about-section" data-aos="fade-up">
     <div className="section-container about-container">
-      <h2 className="heading-h2">About Me</h2>
+      <h2 className="heading-h2">{dict.aboutMe}</h2>
       <div className="about-info">
         <div className="about-left" data-aos="fade-right">
           <img src={`${import.meta.env.BASE_URL}Yiting.jpg`} alt="About Me" className="about-image" />
         </div>
         <div className="about-right" data-aos="fade-left">
           <p className="body-regular">
-            Hi, I’m Yiting 😺🌿 <br /><br />
-            A front-end developer with a UX background—curious, creative, and driven by the joy of building.<br /><br />
-            My journey started in UX design, where I loved turning user needs into meaningful digital experiences. But the more I worked with developers, the more I realized I didn’t want to stop at design—I wanted to build things myself.<br /><br />
-            That curiosity led me to front-end development. I began learning HTML, CSS, and JavaScript, and I was hooked. It felt empowering to bring my ideas to life through code and create experiences that are both functional and beautiful.<br /><br />
-            Now, I’m focused on becoming a developer who not only thinks about how things look and feel—but also how they work.<br /><br />
-            With my UX mindset and technical skills, I’m ready to build better products from the inside out.
+            {dict.aboutDescription}
           </p>
         </div>
       </div>
       <div className="about-skills" data-aos="fade-up">
-        <h3 className="heading-h3">My Skills</h3>
+        <h3 className="heading-h3">{dict.skills}</h3>
 
         <div className="skills-container">
           <div className="skills-logo">
