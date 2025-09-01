@@ -15,7 +15,7 @@ function Navbar({ lang, setLang, dict }) {
         />
         <div className={`navbar-links${open ? " active" : ""}`}>
           <a href="#about" onClick={() => setOpen(false)}>{dict.about}</a>
-          <a href="#projects" onClick={() => setOpen(false)}>{dict.projects}</a>
+          <a href="#projects" onClick={() => setOpen(false)}>{dict.projectsLabel}</a>
           <a href="#contact" onClick={() => setOpen(false)}>{dict.contact}</a>
           <a href="#">{dict.cv}</a>
         </div>

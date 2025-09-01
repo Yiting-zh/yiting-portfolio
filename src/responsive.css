@@ -1,0 +1,390 @@
+/*====================================
+  响应式布局 (Responsive Design)
+====================================*/
+
+/*------------------------------------
+  目录:
+  1. 响应式图片处理规则 (701px-900px范围使用小图，其他范围使用原图)
+  2. 桌面端大屏幕适配 (1200px+)
+  3. 平板电脑大屏幕适配 (1100px以下)
+  4. 平板电脑小屏幕适配 (900px以下)
+  5. 大型手机适配 (700px以下)
+  6. 小型手机适配 (600px以下)
+------------------------------------*/
+
+/*====================================
+  1. 响应式图片处理规则
+====================================*/
+
+/* 900px以上使用原始图片 */
+@media (min-width: 901px) {
+  .project-card.card-cover img[src*=".png"] {
+    content: attr(src); /* 保持使用原图 */
+  }
+}
+
+/* 701px-900px范围使用小图片 */
+@media (min-width: 701px) and (max-width: 900px) {
+  /* 每个项目使用对应的小图版本 */
+  .project-card.card-cover img[src*="teya-case.png"] {
+    content: url('/teya-case-small.png');
+  }
+  
+  .project-card.card-cover img[src*="hangman-case.png"] {
+    content: url('/hangman-case-small.png');
+  }
+  
+  .project-card.card-cover img[src*="genesis-case.png"] {
+    content: url('/genesis-case-small.png');
+  }
+  
+  .project-card.card-cover img[src*="yi-case.png"] {
+    content: url('/yi-case-small.png');
+  }
+}
+
+/* 700px以下使用原始图片 */
+@media (max-width: 700px) {
+  .project-card.card-cover img[src*=".png"] {
+    content: attr(src); /* 恢复使用原图 */
+  }
+}
+
+/*====================================
+  响应式布局断点设置
+====================================*/
+
+/*====================================
+  2. 桌面端大屏幕适配 (1200px+)
+====================================*/
+@media (min-width: 1200px) {
+  /* 容器边距调整 */
+  .section-container,
+  .navbar-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/*====================================
+  3. 平板电脑大屏幕适配 (1100px以下)
+====================================*/
+@media (max-width: 1100px) {
+  /* 项目网格布局调整为两列 */
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .projects-grid .project-card {
+    grid-column: auto !important;
+  }
+
+  /* 卡片图片显示调整 */
+  .project-card.card-cover img {
+    width: 100%;
+    height: 450px; /* 固定高度以保持一致性 */
+    object-fit: cover;
+    display: block;
+  }
+  
+  .project-card.card-detail {
+    width: 100%;
+    height: 450px; /* 与封面卡片保持相同高度 */
+    object-fit: contain;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/*====================================
+  4. 平板电脑小屏幕适配 (900px以下)
+====================================*/
+@media (max-width: 900px) {
+  /*---- Hero区域 ----*/
+  .hero-container {
+    flex-direction: column; /* 改为垂直布局 */
+    gap: 24px;
+    align-items: flex-start;
+  }
+  
+  .hero-left, .hero-right {
+    width: 100%;
+    flex: unset;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .display-hero {
+    font-size: 48px;
+    text-align: left;
+  }
+  
+  .heading-h1 {
+    font-size: 28px;
+    text-align: left;
+  }
+  
+  /*---- 项目卡片区域 ----*/
+  .project-card.card-cover img {
+    width: 100%;
+    height: 450px; /* 900px以下屏幕固定高度 */
+    object-fit: cover;
+  }
+  
+  .project-card-detail img {
+    width: 100%;
+    height: 450px; /* 覆盖层图片高度调整 */
+    object-fit: contain;
+    margin-bottom: 0; /* 去掉底部边距 */
+  }
+  
+  /*---- About区域 ----*/
+  .about-info,
+  .contact-container {
+    flex-direction: column; /* 改为垂直布局 */
+    gap: 24px;
+    align-items: flex-start;
+  }
+  
+  .about-left,
+  .about-right,
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    flex: unset;
+  }
+  
+  .about-image {
+    max-width: 380px;
+    height: 140px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+  
+  /*---- 技能区域 ----*/
+  .skills-logo img {
+    width: 60px; /* 缩小技能图标 */
+  }
+  
+  .skills-text {
+    font-size: 14px; /* 缩小文字 */
+  }
+}
+
+/*====================================
+  5. 大型手机适配 (700px以下)
+====================================*/
+@media (max-width: 700px) {
+  /* 在移动设备上隐藏链接按钮 */
+  .project-card-detail .project-links,
+  .project-card.card-detail .project-links {
+    display: none; /* 隐藏所有链接按钮 */
+  }
+  
+  /*---- 导航栏 ----*/
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 24px;
+    background: var(--color-bg);
+    flex-direction: column; /* 垂直排列菜单项 */
+    align-items: flex-end;
+    gap: 16px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(168,156,200,0.10);
+    display: none; /* 默认隐藏 */
+  }
+  
+  .navbar-links.active {
+    display: flex; /* 点击汉堡菜单时显示 */
+  }
+  
+  .hamburger {
+    display: flex; /* 显示汉堡菜单图标 */
+  }
+
+  /*---- 项目网格布局 ----*/
+  .projects-grid {
+    flex-direction: column; /* 改为单列布局 */
+    gap: 20px;
+  }
+  
+  .projects-container {
+    padding-top: 16px;
+  }
+  
+  .segmented-control {
+    margin-bottom: 32px;
+  }
+  
+  .project-row {
+    flex-direction: column; /* 卡片垂直排列 */
+  }
+  
+  /*---- 卡片样式调整 ----*/
+  .project-card {
+    height: auto;
+    min-height: 250px;
+    border-radius: 24px !important;
+  }
+  
+  /* 卡片圆角调整 */
+  .project-card.card-cover {
+    border-radius: 50px 50px 0 0 !important; /* 上部圆角 */
+  }
+  
+  .project-card.card-detail {
+    border-radius: 0 0 50px 50px !important; /* 下部圆角 */
+    
+    /* 详情卡片布局调整 */
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    box-sizing: border-box;
+    background: none;
+    overflow: hidden;
+    height: auto; /* 自适应高度 */
+  }
+
+  /*---- 图片尺寸调整 ----*/
+  /* 大卡片图片 */
+  .project-card.card-cover img {
+    width: 100%;
+    height: 300px; /* 700px以下屏幕上减小高度 */
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+  
+  /* 详情卡片图片 */
+  .project-card.card-detail img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+  
+  /* 覆盖层图片 */
+  .project-card-detail img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 0; /* 去掉底部边距 */
+  }
+}
+
+/*====================================
+  6. 小型手机适配 (600px以下)
+====================================*/
+@media (max-width: 600px) {
+  /* 继承700px以下的样式，保持链接按钮隐藏 */
+  
+  /*---- 全局布局调整 ----*/
+  section {
+    margin-top: 36px; /* 减小区块间距 */
+    margin-bottom: 36px;
+  }
+  
+  /*---- Hero区域 ----*/
+  .hero-container {
+    gap: 12px; /* 进一步减少间距 */
+  }
+  
+  .display-hero {
+    font-size: 40px; /* 缩小字体 */
+  }
+  
+  .heading-h1 {
+    font-size: 28px;
+    text-align: left;
+  }
+  
+  .hero-image {
+    max-width: 300px; /* 减小图片尺寸 */
+  }
+
+  /*---- About & 联系区域 ----*/
+  .about-info,
+  .contact-container {
+    gap: 12px; /* 减小间距 */
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .about-image {
+    max-width: 300px; /* 减小图片尺寸 */
+    height: auto;
+  }
+  
+  /*---- 技能展示区域 ----*/
+  .skills-container {
+    gap: 8px; /* 减小间距 */
+    margin-top: 20px;
+  }
+  
+  .skills-logo img {
+    width: 40px; /* 进一步缩小技能图标 */
+  }
+  
+  .skills-text {
+    font-size: 12px; /* 缩小文字 */
+  }
+  
+  /*---- 联系区域 ----*/
+  .contact-links,
+  .contact-form {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    gap: 8px;
+  }
+  
+  .contact-links img,
+  .contact-links svg {
+    width: 28px; /* 缩小图标 */
+    height: 28px;
+  }
+
+  /*---- 项目卡片区域 ----*/
+  .projects-container {
+    padding-top: 16px;
+  }
+  
+  .segmented-control {
+    margin-bottom: 32px;
+  }
+  
+  /* 卡片高度 */
+  .project-card.card-cover {
+    height: 250px; /* 与图片高度一致 */
+  }
+
+  /* 大卡片图片 */
+  .project-card.card-cover img {
+    width: 100%;
+    height: 250px; /* 更小屏幕进一步减小高度 */
+    object-fit: cover;
+  }
+  
+  /* 详情卡片图片 */
+  .project-card.card-detail img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  
+  /* 覆盖层图片 */
+  .project-card-detail img {
+    width: 100%;
+    height: 150px; /* 略小于卡片图片 */
+    object-fit: contain;
+    margin-bottom: 0; /* 去掉底部边距 */
+  }
+}
