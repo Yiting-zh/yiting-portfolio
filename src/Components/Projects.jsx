@@ -29,7 +29,7 @@ function Projects({ dict }) {
                         className={`segment ${segment === "design" ? "active" : ""}`}
                         onClick={() => handleSegmentClick("design")}
                     >
-                        Design
+                        {dict.design}
                     </div>
                 </div>
                 <div className="projects-container">

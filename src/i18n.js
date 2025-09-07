@@ -9,16 +9,18 @@ export const LANGUAGES = {
     // Hero
     welcome: "Hi!",
     heroName: "I'm Yiting",
-    heroIntro: "Bridging design thinking and development expertise to create intuitive, responsive web experiences. UX designer turned frontend developer.",
+    heroIntro: "Frontend Developer · UX Design Background · Nature & Creativity Enthusiast 🌿🎨",
 
     // About
     aboutMe: "About Me",
-    aboutDescription: `Hi, I'm Yiting 😺🌿
-            A front-end developer with a UX background—curious, creative, and driven by the joy of building.
-            My journey started in UX design, where I loved turning user needs into meaningful digital experiences. But the more I worked with developers, the more I realized I didn't want to stop at design—I wanted to build things myself.
-            That curiosity led me to front-end development. I began learning HTML, CSS, and JavaScript, and I was hooked. It felt empowering to bring my ideas to life through code and create experiences that are both functional and beautiful.
-            Now, I'm focused on becoming a developer who not only thinks about how things look and feel—but also how they work.
-            With my UX mindset and technical skills, I'm ready to build better products from the inside out.`,
+aboutDescription: [
+  "Hi, I'm Yiting 😺🌿", 
+  "A frontend developer with a background in UX design and marketing.",
+  "I’m passionate about blending design and technology to create digital experiences that are both beautiful and functional.",
+  "Curiosity and creativity are my biggest drivers — they push me to explore, iterate, and find joy in building.",
+  "Curiosity and creativity keep me exploring, iterating, and finding joy in every build.",
+  "Beyond coding, you’ll often find me outdoors, experimenting with recipes in the kitchen, or painting — hobbies that bring fresh perspectives into my work and remind me to always stay open and playful."
+],
     skills: "Skills",
 
     // Common labels
@@ -34,30 +36,16 @@ export const LANGUAGES = {
 
     // Projects details
     projects: {
-      teyaJewelry: {
-        name: "Teya jewelry e-commerce website",
-        coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
-        tech: "UX/UI, HTML, CSS, JavaScript, React",
-        description: "Teya jewelry e-commerce website.",
-        fullDescription: {
-          learnings: "Learned how to structure a project, use Sass, basic validation, and responsive design.",
-          role: "Solo Project",
-          challenges: "Attention to detail in HTML/SCSS structure and form validation."
-        },
-        viewLive: "https://yiting-zh.github.io/yiting-portfolio-design/",
-        github: "https://github.com/Yiting-zh/yiting-portfolio-design"
-      },
       hangmanGame: {
-        name: "Hangman Game",
+                name: "Hangman Game",
         coverImage: `${import.meta.env.BASE_URL}hangman-case.png`,
         gifImage: `${import.meta.env.BASE_URL}hangman.gif`,
-        tech: "HTML, CSS, API，JavaScript",
-        description: "A classic Hangman game built with JavaScript.",
+        tech: "React, React Router DOM, CSS3, API, JavaScript ES6+, localStorage, Responsive Design",
+        description: "A web-based Hangman game built with React and Vite, featuring user authentication system and responsive design. Players can create accounts and log in before playing, with an intuitive UI enhanced by custom visual elements.",
         fullDescription: {
-          learnings: "Learned about game logic, DOM manipulation, and event handling.",
-          role: "Team Project",
-          challenges: "Precise visual layout matching the Figma design."
+          learnings: "Client-side authentication implementation, React state management and routing, form handling and validation, responsive design principles, and component-based architecture.",
+          role: "Team Project — Responsible for user authentication system, login/registration flow",
+          challenges: "Data Management: Secure localStorage implementation, user session handling, error case management. UX/UI: Form validation, error feedback, seamless navigation flow."
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
         github: "https://github.com/Yiting-zh/project3"
@@ -66,12 +54,12 @@ export const LANGUAGES = {
         name: "Genesis Portfolio",
         coverImage: `${import.meta.env.BASE_URL}genesis-case.png`,
         gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.gif`,
-        tech: "HTML, CSS, SASS, JavaScript",
-        description: "Recreate the Figma file for Genesis portfolio.",
+        tech: "HTML, CSS, SCSS, Prepros",
+        description: "A portfolio website developed from a Figma design, showcasing multiple projects and contact information. Features responsive layout with home, project details, and contact pages, emphasizing clean modern design and user experience.",
         fullDescription: {
-          learnings: "Learned how to structure a project, use Sass, basic validation, and responsive design.",
-          role: "Solo Project",
-          challenges: "Attention to detail in HTML/SCSS structure and form validation."
+          learnings: "Deepened understanding of CSS layouts, SCSS modularity, and responsive web design, particularly mastering CSS Grid implementation. Enhanced frontend development standards and code organization skills.",
+          role: "Frontend Developer",
+          challenges: "Precisely translating Figma design to web while ensuring cross-screen compatibility. Mastering CSS Grid for complex photo layouts. Managing multi-page structure and style files for maintainability. Implementing detailed animations and interactions for enhanced UX."
         },
         viewLive: "https://yiting-zh.github.io/genesis-portfolio-design/",
         github: "https://github.com/Yiting-zh/genesis-portfolio-design"
@@ -84,10 +72,24 @@ export const LANGUAGES = {
         description: "A React-based portfolio highlighting clean, responsive, and user-centric frontend development.",
         fullDescription: {
           learnings: "Mastered React components, implemented multi-language support, integrated smooth animations, and optimized performance with Vite.",
-          role: "Solo Project",
-          challenges: "Creating seamless responsive layouts, implementing elegant animations, and ensuring consistent performance across different languages and devices."
+          role: "UI/UX Designer & Developer",
+          challenges: "Creating seamless responsive layouts, implementing elegant animations, background animation effects, and mastering useEffect for animation and data logic. Ensuring consistent performance across different languages and devices."
         },
         github: "https://github.com/Yiting-zh/yiting-portfolio"
+      },
+      teyaJewelry: {
+        name: "Téya Jewelry Store",
+        coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
+        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
+        tech: "Next.js, React, Supabase, CSS Modules, Lucide Icons, Vercel, JavaScript",
+        description: "Téya Jewelry Store is a custom online jewelry shop project built with Next.js full-stack development. The site includes homepage, product categories, detail pages, cart, and checkout for a complete e-commerce flow. All images are currently placeholders and will be replaced with official client assets. The project is still in development, aiming for an elegant UI and smooth shopping experience.",
+        fullDescription: {
+          learnings: "Gained deep understanding of Next.js full-stack development, including frontend pages and backend data interaction. Mastered React component state management and context sync (such as CartContext). Practiced connecting frontend and backend logic for e-commerce flows. Became familiar with integrating Supabase as backend service and data management.",
+          role: "UI/UX Designer & Full Stack Developer",
+          challenges: "Synchronizing cart and checkout data and state management for real-time user feedback. Designing and implementing interaction logic for product cards and CartSidebar. Handling data flow and security in a full-stack architecture. Achieving a balance of beautiful UI and responsive layout for usability."
+        },
+        viewLive: "https://teya-jewelry-store.vercel.app/",
+        github: "https://github.com/Yiting-zh/yiting-portfolio-design"
       },
       barWebsite: {
         name: "Bar website design",
@@ -107,7 +109,7 @@ export const LANGUAGES = {
 
     // Contact
     letsConnect: "Let's Connect",
-    connectMessage: "I'm always excited to connect with fellow developers, designers, and anyone who shares a passion for building great things. Whether you have a project in mind, want to collaborate, or just want to chat about tech, feel free to reach out!",
+    connectMessage: "I enjoy connecting with people from all backgrounds. If you have ideas, want to collaborate, or just want to chat, my inbox is always open!",
     send: "Send Message",
     name: "Name",
     email: "Email",
@@ -127,16 +129,17 @@ export const LANGUAGES = {
     // Hero
     welcome: "Hi！",
     heroName: "我是张怡婷",
-    heroIntro: "融合设计思维与开发专长，打造直观流畅的网络体验。从UX设计师到前端开发，让创意与技术相得益彰。",
+    heroIntro: "用设计师的眼光创造体验，以开发者的专业实现愿景。让美学与技术相融，打造精致又实用的数字产品",
 
     // About
     aboutMe: "关于我",
-    aboutDescription: `你好，我是怡婷 😺🌿
-一名前端开发者，拥有UX设计背景——好奇、富有创造力，并以构建的乐趣为驱动力。
-我的职业旅程始于UX设计，我喜欢将用户需求转化为有意义的数字体验。但在与开发者合作的过程中，我意识到自己不想止步于设计——我也想亲手实现作品。
-这种好奇心驱使我走向前端开发。我开始学习HTML、CSS和JavaScript，并深深着迷。通过代码将想法变为现实，创造既实用又美观的体验，这让我感到非常充实。
-现在，我专注于成为一名不仅关注界面和体验，更关注实现方式的开发者。
-凭借我的UX思维和技术能力，我准备好从内到外打造更好的产品。`,
+  aboutDescription: [
+    "你好，我是怡婷 😺🌿",
+    "作为一名前端开发者，我还有着 UX 设计和市场营销的背景。这样的经历让我在开发时能够更好地理解用户需求，平衡技术实现与用户体验。",
+    "我热衷于将设计与技术完美融合。在我的项目中，你会看到简约优雅的界面设计、流畅自然的交互体验，以及精心打磨的技术细节 ✨",
+    "好奇心和创造力是我的动力。每个项目都是一次成长的机会，让我在解决挑战的过程中不断探索和突破，收获满满的成就感。",
+    "工作之外，我喜欢亲近大自然、钻研美食、享受绘画时光。这些生活中的小确幸不仅平衡了工作与生活，也为我的技术创作带来了更多灵感和新鲜视角 🎨"
+  ],
     skills: "技能",
 
     // Common labels
@@ -152,30 +155,16 @@ export const LANGUAGES = {
 
     // Projects details
     projects: {
-      teyaJewelry: {
-        name: "Teya 珠宝电商网站",
-        coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
-        tech: "UX/UI, HTML, CSS, JavaScript, React",
-        description: "Teya 珠宝电商网站",
-        fullDescription: {
-          learnings: "学习了如何构建项目架构，使用Sass，基础验证和响应式设计。",
-          role: "独立项目",
-          challenges: "HTML/SCSS结构和表单验证的细节处理。"
-        },
-        viewLive: "https://yiting-zh.github.io/yiting-portfolio-design/",
-        github: "https://github.com/Yiting-zh/yiting-portfolio-design"
-      },
       hangmanGame: {
-        name: "吊颈人游戏",
+        name: "趣味猜词游戏",
         coverImage: `${import.meta.env.BASE_URL}hangman-case.png`,
         gifImage: `${import.meta.env.BASE_URL}hangman.gif`,
-        tech: "HTML, CSS, API，JavaScript",
-        description: "用JavaScript构建的经典吊颈人游戏。",
+        tech: "React, React Router DOM, CSS3, API, JavaScript ES6+, localStorage, 响应式设计",
+        description: "使用React和Vite构建的网页版趣味猜词游戏，具有用户认证系统和响应式设计。玩家可以创建账号并登录后开始游戏，直观的用户界面通过自定义视觉元素增强了用户体验。",
         fullDescription: {
-          learnings: "学习了游戏逻辑、DOM操作和事件处理。",
-          role: "团队项目",
-          challenges: "精确匹配Figma设计的视觉布局。"
+          learnings: "实现客户端身份验证、React状态管理和路由、表单处理和验证、响应式设计原则以及基于组件的架构。",
+          role: "负责身份验证系统的开发，包括登录/注册组件、本地数据持久化、用户认证流程和认证页面的响应式UI。",
+          challenges: "数据管理：实现安全的localStorage存储、用户会话处理、错误情况管理。用户体验/界面：表单验证、错误反馈、流畅的导航流程。"
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
         github: "https://github.com/Yiting-zh/project3"
@@ -184,12 +173,12 @@ export const LANGUAGES = {
         name: "Genesis作品集",
         coverImage: `${import.meta.env.BASE_URL}genesis-case.png`,
         gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.gif`,
-        tech: "HTML, CSS, SASS, JavaScript",
-        description: "重现Figma文件中的Genesis作品集。",
+        tech: "HTML, CSS, SCSS, Prepros",
+        description: "基于Figma设计稿开发的个人作品集网站，展示多个项目作品和联系方式。采用响应式布局设计，包含首页、项目详情和联系页面，整体风格简约现代，注重视觉设计和用户体验。",
         fullDescription: {
-          learnings: "学习了项目架构、Sass使用、基础验证和响应式设计。",
+          learnings: "深入学习了CSS布局技术、SCSS模块化开发和响应式设计原则，特别是掌握了CSS Grid的实践应用。提升了前端开发规范意识和代码组织能力。",
           role: "独立项目",
-          challenges: "HTML/SCSS结构和表单验证的细节处理。"
+          challenges: "精确还原Figma设计稿，确保跨屏幕尺寸的适配性。通过深入学习CSS Grid实现复杂的图片布局效果。优化多页面结构和样式文件的管理，提高代码可维护性。实现细节动画和交互效果以提升用户体验。"
         },
         viewLive: "https://yiting-zh.github.io/genesis-portfolio-design/",
         github: "https://github.com/Yiting-zh/genesis-portfolio-design"
@@ -199,13 +188,27 @@ export const LANGUAGES = {
         coverImage: `${import.meta.env.BASE_URL}yi-case.png`,
         gifImage: `${import.meta.env.BASE_URL}yi-case.gif`,
         tech: "React, Vite, CSS3, JavaScript ES6+, i18n (国际化), AOS动画, Git, npm, ESLint, 响应式设计, 跨浏览器兼容",
-        description: "基于React的作品集网站，展示清晰、响应式和以用户为中心的前端开发。",
+        description: "基于React的我的个人作品集网站，展示清晰、响应式和以用户为中心的前端开发。",
         fullDescription: {
           learnings: "掌握了React组件开发，实现了多语言支持，集成了平滑动画，并使用Vite优化了性能。",
           role: "独立项目",
-          challenges: "创建无缝的响应式布局，实现优雅的动画效果，确保在不同语言和设备上的一致性能表现。"
+          challenges: "创建响应式布局，实现优雅的动画效果，尤其是背景动效的实现，以及对 useEffect 的深入运用（动画与数据逻辑）。确保在不同语言和设备上的一致性能表现。"
         },
         github: "https://github.com/Yiting-zh/yiting-portfolio"
+      },
+            teyaJewelry: {
+        name: "Téya Jewelry Store 线上首饰店",
+        coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
+        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
+        tech: " Next.js, React, Supabase, JavaScript, CSS Modules, Lucide Icons, Vercel, Next/Image, Next/Link, React Context",
+        description: "Téya Jewelry Store 是一个为客户定制的在线珠宝商店项目，采用 Next.js 全栈开发。项目包含首页、产品分类、详情页、购物车、结账等完整电商流程。所有图片目前仅为参考，后续将替换为客户提供的正式素材。该项目仍在开发中，旨在实现优雅的 UI 与流畅的购物体验。",
+        fullDescription: {
+          learnings: "理解 Next.js 的全栈开发模式，包括前端页面与后端数据交互。掌握 React 组件状态管理与上下文同步（如购物车 CartContext）。实践了电商业务流程的前端与后端逻辑串联。熟悉 Supabase 作为后端服务的集成与数据管理。",
+          role: "独立全栈开发者",
+          challenges: "购物车与结账流程的数据同步与状态管理，确保用户操作的实时反馈。产品卡片与购物车侧边栏（CartSidebar）的交互逻辑设计与实现。全栈架构下，前后端数据流的衔接与安全性处理。UI 设计与响应式布局，兼顾美观与易用性。"
+        },
+        viewLive: "https://teya-jewelry-store.vercel.app/",
+        github: "https://github.com/Yiting-zh/yiting-portfolio-design"
       },
       barWebsite: {
         name: "酒吧网站设计",
@@ -224,8 +227,8 @@ export const LANGUAGES = {
     },
 
     // Contact
-    letsConnect: "保持联系",
-    connectMessage: "我很乐意与开发者、设计师以及所有热爱创造美好事物的人交流。如果你有项目想法、希望合作，或只是想聊聊技术，欢迎随时联系我！",
+    letsConnect: "联系我",
+  connectMessage: "无论你来自什么领域，如果你有项目想法、想合作，或者只是想聊聊天，随时欢迎你来联系我！",
     send: "发送信息",
     name: "姓名",
     email: "邮箱",
@@ -249,12 +252,13 @@ export const LANGUAGES = {
 
     // About
     aboutMe: "Om mig",
-    aboutDescription: `Hej, jag är Yiting 😺🌿
-En frontendutvecklare med UX-bakgrund—nyfiken, kreativ och drivs av glädjen att skapa.
-Min resa började inom UX-design, där jag älskade att omvandla användarbehov till meningsfulla digitala upplevelser. Ju mer jag samarbetade med utvecklare, desto mer insåg jag att jag inte ville stanna vid design—jag ville bygga saker själv.
-Den nyfikenheten ledde mig till frontendutveckling. Jag började lära mig HTML, CSS och JavaScript, och blev fast. Det kändes stärkande att förverkliga mina idéer med kod och skapa upplevelser som är både funktionella och vackra.
-Nu fokuserar jag på att bli en utvecklare som inte bara tänker på hur saker ser ut och känns—utan också hur de fungerar.
-Med mitt UX-tänk och tekniska färdigheter är jag redo att bygga bättre produkter från grunden och ut.`,
+      aboutDescription: [
+        "Hej, jag heter Yiting 😺🌿",
+        "Jag är en frontend-utvecklare med bakgrund inom UX-design och marknadsföring.",
+        "Jag brinner för att kombinera design och teknik för att skapa digitala upplevelser som är vackra, funktionella och lite magiska ✨.",
+        "Nyfikenhet och kreativitet driver mig att utforska, iterera och hitta glädje i varje bygge.",
+        "Utanför kodningen hittar du mig ofta ute i naturen 🌱, i köket där jag provar nya recept 🍳, eller målande 🎨 — intressen som ger mig nya perspektiv och påminner mig om att alltid vara öppen och lekfull."
+      ],
     skills: "Färdigheter",
 
     // Common labels
@@ -270,30 +274,16 @@ Med mitt UX-tänk och tekniska färdigheter är jag redo att bygga bättre produ
 
     // Projects details
     projects: {
-      teyaJewelry: {
-        name: "Teya smyckens e-handelswebbplats",
-        coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
-        tech: "UX/UI, HTML, CSS, JavaScript, React",
-        description: "En e-handelswebbplats för Teya smycken.",
-        fullDescription: {
-          learnings: "Lärde mig hur man strukturerar ett projekt, använder Sass, grundläggande validering och responsiv design.",
-          role: "Soloprojekt",
-          challenges: "Uppmärksamhet på detaljer i HTML/SCSS-struktur och formulärvalidering."
-        },
-        viewLive: "https://yiting-zh.github.io/yiting-portfolio-design/",
-        github: "https://github.com/Yiting-zh/yiting-portfolio-design"
-      },
       hangmanGame: {
         name: "Hänga gubbe-spel",
         coverImage: `${import.meta.env.BASE_URL}hangman-case.png`,
         gifImage: `${import.meta.env.BASE_URL}hangman.gif`,
-        tech: "HTML, CSS, API，JavaScript",
-        description: "Ett klassiskt Hänga gubbe-spel byggt med JavaScript.",
+        tech: "React, React Router DOM, CSS3, API, JavaScript ES6+, localStorage, Responsiv Design",
+        description: "Ett webbaserat Hänga gubbe-spel byggt med React och Vite, med användarautentisering och responsiv design. Spelare kan skapa konton och logga in innan de spelar, med ett intuitivt användargränssnitt förbättrat av anpassade visuella element.",
         fullDescription: {
-          learnings: "Lärde mig om spellogik, DOM-manipulation och händelsehantering.",
-          role: "Grupprojekt",
-          challenges: "Exakt visuell layout som matchar Figma-designen."
+          learnings: "Implementering av klientautentisering, React-tillståndshantering och routing, formulärhantering och validering, responsiva designprinciper och komponentbaserad arkitektur.",
+          role: "Ledde utvecklingen av autentiseringssystemet, inklusive inloggnings-/registreringskomponenter, lokal datapersistens, användarautentiseringsflöde och responsivt UI för auth-sidor.",
+          challenges: "Datahantering: Säker localStorage-implementering, användarssessionshantering, felhantering. UX/UI: Formulärvalidering, felåterkoppling, sömlöst navigeringsflöde."
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
         github: "https://github.com/Yiting-zh/project3"
@@ -302,12 +292,12 @@ Med mitt UX-tänk och tekniska färdigheter är jag redo att bygga bättre produ
         name: "Genesis Portfolio",
         coverImage: `${import.meta.env.BASE_URL}genesis-case.png`,
         gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.gif`,
-        tech: "HTML, CSS, SASS, JavaScript",
-        description: "Återskapande av Figma-filen för Genesis portfolio.",
+        tech: "HTML, CSS, SCSS, Prepros",
+        description: "En portfoliowebbplats utvecklad från Figma-design, som visar flera projekt och kontaktinformation. Innehåller responsiv layout med hem-, projektdetalj- och kontaktsidor, med fokus på ren modern design och användarupplevelse.",
         fullDescription: {
-          learnings: "Lärde mig hur man strukturerar ett projekt, använder Sass, grundläggande validering och responsiv design.",
+          learnings: "Fördjupad förståelse för CSS-layouter, SCSS-modularitet och responsiv webbdesign, särskilt behärskande av CSS Grid-implementering. Förbättrade frontend-utvecklingsstandarder och kodorganiseringsförmåga.",
           role: "Soloprojekt",
-          challenges: "Uppmärksamhet på detaljer i HTML/SCSS-struktur och formulärvalidering."
+          challenges: "Exakt översättning av Figma-design till webb samtidigt som kompatibilitet mellan skärmar säkerställs. Behärska CSS Grid för komplexa fotolayouter. Hantera flersidig struktur och stilfiler för underhållbarhet. Implementera detaljerade animationer och interaktioner för förbättrad användarupplevelse."
         },
         viewLive: "https://yiting-zh.github.io/genesis-portfolio-design/",
         github: "https://github.com/Yiting-zh/genesis-portfolio-design"
@@ -324,6 +314,20 @@ Med mitt UX-tänk och tekniska färdigheter är jag redo att bygga bättre produ
           challenges: "Skapande av sömlösa responsiva layouter, implementering av eleganta animationer och säkerställande av konsekvent prestanda över olika språk och enheter."
         },
         github: "https://github.com/Yiting-zh/yiting-portfolio"
+      },
+            teyaJewelry: {
+        name: "Téya Jewelry Store",
+        coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
+        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
+        tech: "Next.js, React, Supabase, CSS Modules, Lucide Icons, Vercel, JavaScript",
+        description: "Téya Jewelry Store är ett kundanpassat onlineprojekt för smycken, byggt med Next.js fullstack-utveckling. Webbplatsen innehåller startsida, produktkategorier, produktsidor, varukorg och kassa för ett komplett e-handelsflöde. Alla bilder är för närvarande platshållare och kommer att ersättas med kundens officiella material. Projektet är under utveckling och syftar till att skapa en elegant UI och smidig shoppingupplevelse.",
+        fullDescription: {
+          learnings: "Fördjupad förståelse för Next.js fullstack-utveckling, inklusive frontend-sidor och backend-datahantering. Behärskade React-komponenters tillståndshantering och kontextsynkronisering (t.ex. CartContext). Praktiserade kopplingen mellan frontend- och backendlogik för e-handelsflöden. Blev bekant med integration av Supabase som backendtjänst och databas.",
+          role: "Solo Fullstackutvecklare",
+          challenges: "Synkronisering av varukorg och kassadata samt tillståndshantering för att ge användaren direkt feedback. Design och implementation av interaktionslogik för produktkort och CartSidebar. Hantering av dataflöde och säkerhet i fullstack-arkitektur. UI-design och responsiv layout med fokus på både estetik och användarvänlighet."
+        },
+        viewLive: "https://teya-jewelry-store.vercel.app/",
+        github: "https://github.com/Yiting-zh/yiting-portfolio-design"
       },
       barWebsite: {
         name: "Bar webbdesign",
@@ -343,7 +347,7 @@ Med mitt UX-tänk och tekniska färdigheter är jag redo att bygga bättre produ
 
     // Contact
     letsConnect: "Låt oss kontakta",
-    connectMessage: "Jag ser alltid fram emot att få kontakt med andra utvecklare, designers och alla som brinner för att skapa fantastiska saker. Oavsett om du har ett projekt i åtanke, vill samarbeta eller bara vill prata teknik – hör gärna av dig!",
+  connectMessage: "Jag gillar att träffa människor med olika bakgrund. Har du idéer, vill samarbeta eller bara snacka lite? Hör av dig när som helst!",
     send: "Skicka",
     name: "Namn",
     email: "E-post",
@@ -352,4 +356,4 @@ Med mitt UX-tänk och tekniska färdigheter är jag redo att bygga bättre produ
     // Footer or others
     copyright: "Alla rättigheter förbehållna."
   }
-};
+}
