@@ -1,40 +1,22 @@
-import React, { useEffect, useState } from "react";
+
+import React from "react";
 
 const balls = [
-  { color: 'rgba(253, 220, 113, 0.7)', size: 280 }, 
-  { color: 'rgba(253, 220, 113, 0.7)', size: 280 },   
-  { color: 'rgba(213, 196, 224, 0.7)', size: 240 },  
-  { color: 'rgba(249, 214, 193, 0.7)', size: 240 },   
-  { color: 'rgba(255, 222, 173, 0.7)', size: 140 },  
-  { color: 'rgba(255, 182, 193, 0.6)', size: 270 },   
-  { color: 'rgba(186, 230, 213, 0.7)', size: 200 },   
+  { color: 'rgba(253, 220, 113, 0.7)', size: 280, duration: 14 },
+  { color: 'rgba(253, 220, 113, 0.7)', size: 280, duration: 12 },
+  { color: 'rgba(213, 196, 224, 0.7)', size: 240, duration: 16 },
+  { color: 'rgba(249, 214, 193, 0.7)', size: 240, duration: 14 },
+  { color: 'rgba(255, 222, 173, 0.7)', size: 140, duration: 10 },
+  { color: 'rgba(255, 182, 193, 0.6)', size: 270, duration: 18 },
+  { color: 'rgba(186, 230, 213, 0.7)', size: 200, duration: 12 },
 ];
 
-function randPx(max, ballSize) {
-  return Math.random() * (max - ballSize);
-}
-
-function Ball({ color, size, windowSize }) {
-  const [pos, setPos] = useState({
-    top: randPx(windowSize.height, size),
-    left: randPx(windowSize.width, size),
-  });
-
-  const [duration, setDuration] = useState(3 + Math.random() * 3); 
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPos({
-        top: randPx(windowSize.height, size),
-        left: randPx(windowSize.width, size),
-      });
-      setDuration(3 + Math.random() * 3);
-    }, duration * 1000);
-    return () => clearInterval(interval);
-  }, [windowSize, size, duration]);
-
+function Ball({ color, size, duration, index }) {
+  // Each ball gets a unique animation name for staggered movement
+  const animName = `ball-move-${index}`;
   return (
     <div
+      className="ball-bg"
       style={{
         background: color,
         width: size,
@@ -42,30 +24,39 @@ function Ball({ color, size, windowSize }) {
         filter: "blur(80px)",
         position: "absolute",
         borderRadius: "50%",
-        top: `${pos.top}px`,
-        left: `${pos.left}px`,
-        transition: `top ${duration}s linear, left ${duration}s linear`,
         pointerEvents: "none",
+        animation: `${animName} ${duration}s linear infinite alternate`,
+        top: 0,
+        left: 0,
       }}
     />
   );
 }
 
-const BallsBackground = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+const BallsBackground = () => {
+  // Generate keyframes for each ball's movement with multiple random points
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    let keyframes = '';
+    balls.forEach((ball, i) => {
+      const vw = 100 - ball.size / window.innerWidth * 100;
+      const vh = 100 - ball.size / window.innerHeight * 100;
+      // Generate 5 random keyframes for each ball
+      let frames = [];
+      for (let k = 0; k < 5; k++) {
+        const percent = Math.round((k / 4) * 100);
+        const left = Math.random() * vw;
+        const top = Math.random() * vh;
+        frames.push(`${percent}% { left: ${left}vw; top: ${top}vh; }`);
+      }
+      keyframes += `@keyframes ball-move-${i} {\n  ${frames.join('\n  ')}\n}`;
+    });
+    style.innerHTML = keyframes;
+    document.head.appendChild(style);
+    return () => {
+      document.head.removeChild(style);
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -86,7 +77,8 @@ const BallsBackground = () => {
           key={i}
           color={ball.color}
           size={ball.size}
-          windowSize={windowSize}
+          duration={ball.duration}
+          index={i}
         />
       ))}
     </div>
