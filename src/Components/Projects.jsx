@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function Projects({ dict }) {
     const [segment, setSegment] = useState("projects");
     const handleSegmentClick = (type) => {
@@ -9,6 +10,9 @@ function Projects({ dict }) {
             setSegment("projects");
         }
     };
+
+    // 判断是否为移动端
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
     // 多语言项目数组
     const projects = dict.projects ? Object.values(dict.projects) : [];
@@ -39,13 +43,15 @@ function Projects({ dict }) {
                                 <div className="project-row" key={project.name}>
                                     {/* 大卡片 - 静态图片和完整信息 */}
                                     <div className="project-card card-cover" data-aos="fade-up">
-                                        {/* 使用媒体查询在CSS中控制的图片 */}
                                         <img 
                                             src={project.coverImage} 
                                             alt={project.name} 
                                         />
                                         <div className="project-card-detail">
-                                            <img src={project.gifImage} alt={`${project.name} demo`} />
+                                            {/* PC端显示 GIF，移动端不显示 GIF */}
+                                            {!isMobile && (
+                                                <img src={project.gifImage} alt={`${project.name} demo`} />
+                                            )}
                                             <div className="project-links">
                                                 {project.viewLive && (
                                                     <a
