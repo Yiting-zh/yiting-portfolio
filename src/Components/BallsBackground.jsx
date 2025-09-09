@@ -2,10 +2,13 @@
 import React from "react";
 
 const balls = [
-  { color: 'rgba(253, 220, 113, 0.6)', size: 260, duration: 12 },
-  { color: 'rgba(213, 196, 224, 0.6)', size: 220, duration: 14 },
-  { color: 'rgba(249, 214, 193, 0.6)', size: 200, duration: 10 },
-  { color: 'rgba(186, 230, 213, 0.6)', size: 180, duration: 12 },
+  { color: 'rgba(253, 220, 113, 0.7)', size: 280, duration: 14 },
+  { color: 'rgba(253, 220, 113, 0.7)', size: 280, duration: 12 },
+  { color: 'rgba(213, 196, 224, 0.7)', size: 240, duration: 16 },
+  { color: 'rgba(249, 214, 193, 0.7)', size: 240, duration: 14 },
+  { color: 'rgba(255, 222, 173, 0.7)', size: 140, duration: 10 },
+  { color: 'rgba(255, 182, 193, 0.6)', size: 270, duration: 18 },
+  { color: 'rgba(186, 230, 213, 0.7)', size: 200, duration: 12 },
 ];
 
 function Ball({ color, size, duration, index }) {
@@ -18,7 +21,7 @@ function Ball({ color, size, duration, index }) {
         background: color,
         width: size,
         height: size,
-  filter: "blur(40px)",
+        filter: "blur(80px)",
         position: "absolute",
         borderRadius: "50%",
         pointerEvents: "none",
@@ -33,13 +36,15 @@ function Ball({ color, size, duration, index }) {
 
 
 const BallsBackground = () => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  // 判断是否为移动端（包括 iPad）
+  const isMobile = typeof window !== 'undefined' && (
+    window.innerWidth < 1024 || /iPad|iPhone|Android|Mobile/i.test(navigator.userAgent)
+  );
 
-  // 移动端：静止圆球，随机位置，无动画，保留渐变背景
+  // 移动端：静止圆球，随机位置，无动画
   const [mobileBalls, setMobileBalls] = React.useState([]);
   React.useEffect(() => {
     if (!isMobile) return;
-    // 计算圆球随机位置（vw/vh），每次刷新都不同
     const positions = balls.map(ball => {
       const vw = 100 - ball.size / window.innerWidth * 100;
       const vh = 100 - ball.size / window.innerHeight * 100;
@@ -98,7 +103,7 @@ const BallsBackground = () => {
               background: ball.color,
               width: ball.size,
               height: ball.size,
-              filter: "blur(40px)",
+              filter: "blur(80px)",
               position: "absolute",
               borderRadius: "50%",
               pointerEvents: "none",
