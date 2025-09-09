@@ -39,13 +39,31 @@ function Projects({ dict }) {
                                 <div className="project-row" key={project.name}>
                                     {/* 大卡片 - 响应式图片和完整信息 */}
                                     <div className="project-card card-cover" data-aos="fade-up">
-                                        {/* 使用媒体查询在CSS中控制的图片 */}
-                                        <img 
-                                            src={project.coverImage} 
-                                            alt={project.name} 
-                                        />
+                                        {/* 使用 picture 元素实现响应式图片加载 */}
+                                        <picture>
+                                            {/* 手机端使用 small 图片 (500px及以下) */}
+                                            <source 
+                                                media="(max-width: 500px)" 
+                                                srcSet={project.coverImage.replace('.png', '-small.png')}
+                                            />
+                                            {/* 默认使用原始图片 */}
+                                            <img 
+                                                src={project.coverImage} 
+                                                alt={project.name} 
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <div className="project-card-detail">
-                                            <img src={project.gifImage} alt={`${project.name} demo`} />
+                                            <picture>
+                                                {/* GIF图片也添加懒加载 */}
+                                                <video 
+                                                    src={project.gifImage} 
+                                                    autoPlay
+                                                    loop
+                                                    muted
+                                                    playsInline
+                                                />
+                                            </picture>
                                             <div className="project-links">
                                                 {project.viewLive && (
                                                     <a
@@ -85,12 +103,13 @@ function Projects({ dict }) {
                                             <p className="body-regular">
                                                 <strong>{dict.tech}: </strong> {project.tech}
                                             </p>
-                                            <div className="project-links">
+                                            <div className="project-links-detail">
                                                 {project.viewLive && (
                                                     <a
                                                         href={project.viewLive}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
+                                                        className="link-button"
                                                     >
                                                         {dict.viewLive}
                                                     </a>
@@ -99,6 +118,7 @@ function Projects({ dict }) {
                                                     href={project.github}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    className="link-button"
                                                 >
                                                     GitHub
                                                 </a>

@@ -39,7 +39,7 @@ aboutDescription: [
       hangmanGame: {
                 name: "Hangman Game",
         coverImage: `${import.meta.env.BASE_URL}hangman-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}hangman.gif`,
+        gifImage: `${import.meta.env.BASE_URL}hangman.mp4`,
         tech: "React, React Router DOM, CSS3, API, JavaScript ES6+, localStorage, Responsive Design",
         description: "A web-based Hangman game built with React and Vite, featuring user authentication system and responsive design. Players can create accounts and log in before playing, with an intuitive UI enhanced by custom visual elements.",
         fullDescription: {
@@ -48,12 +48,12 @@ aboutDescription: [
           challenges: "Data Management: Secure localStorage implementation, user session handling, error case management. UX/UI: Form validation, error feedback, seamless navigation flow."
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
-        github: "https://github.com/Yiting-zh/project3"
+        github: "https://github.com/Yiting-zh/Hangman-Project"
       },
       genesisPortfolio: {
         name: "Genesis Portfolio",
         coverImage: `${import.meta.env.BASE_URL}genesis-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.gif`,
+        gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.mp4`,
         tech: "HTML, CSS, SCSS, Prepros",
         description: "A portfolio website developed from a Figma design, showcasing multiple projects and contact information. Features responsive layout with home, project details, and contact pages, emphasizing clean modern design and user experience.",
         fullDescription: {
@@ -67,7 +67,7 @@ aboutDescription: [
       portfolio: {
         name: "Yiting's Portfolio",
         coverImage: `${import.meta.env.BASE_URL}yi-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}yi-case.gif`,
+        gifImage: `${import.meta.env.BASE_URL}yi-case.mp4`,
         tech: "React, Vite, CSS3, JavaScript ES6+, i18n (Internationalization), AOS Animation, Git, npm, ESLint, Responsive Design, Cross-browser Compatibility",
         description: "A React-based portfolio highlighting clean, responsive, and user-centric frontend development.",
         fullDescription: {
@@ -80,7 +80,7 @@ aboutDescription: [
       teyaJewelry: {
         name: "Téya Jewelry Store",
         coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
+        gifImage: `${import.meta.env.BASE_URL}teya-case.mp4`,
         tech: "Next.js, React, Supabase, CSS Modules, Lucide Icons, Vercel, JavaScript",
         description: "Téya Jewelry Store is a custom online jewelry shop project built with Next.js full-stack development. The site includes homepage, product categories, detail pages, cart, and checkout for a complete e-commerce flow. All images are currently placeholders and will be replaced with official client assets. The project is still in development, aiming for an elegant UI and smooth shopping experience.",
         fullDescription: {
@@ -158,7 +158,7 @@ aboutDescription: [
       hangmanGame: {
         name: "趣味猜词游戏",
         coverImage: `${import.meta.env.BASE_URL}hangman-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}hangman.gif`,
+        gifImage: `${import.meta.env.BASE_URL}hangman.mp4`,
         tech: "React, React Router DOM, CSS3, API, JavaScript ES6+, localStorage, 响应式设计",
         description: "使用React和Vite构建的网页版趣味猜词游戏，具有用户认证系统和响应式设计。玩家可以创建账号并登录后开始游戏，直观的用户界面通过自定义视觉元素增强了用户体验。",
         fullDescription: {
@@ -167,12 +167,12 @@ aboutDescription: [
           challenges: "数据管理：实现安全的localStorage存储、用户会话处理、错误情况管理。用户体验/界面：表单验证、错误反馈、流畅的导航流程。"
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
-        github: "https://github.com/Yiting-zh/project3"
+        github: "https://github.com/Yiting-zh/Hangman-Project"
       },
       genesisPortfolio: {
         name: "Genesis作品集",
         coverImage: `${import.meta.env.BASE_URL}genesis-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.gif`,
+        gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.mp4`,
         tech: "HTML, CSS, SCSS, Prepros",
         description: "基于Figma设计稿开发的个人作品集网站，展示多个项目作品和联系方式。采用响应式布局设计，包含首页、项目详情和联系页面，整体风格简约现代，注重视觉设计和用户体验。",
         fullDescription: {
@@ -186,7 +186,7 @@ aboutDescription: [
       portfolio: {
         name: "Yi的作品集",
         coverImage: `${import.meta.env.BASE_URL}yi-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}yi-case.gif`,
+        gifImage: `${import.meta.env.BASE_URL}yi-case.mp4`,
         tech: "React, Vite, CSS3, JavaScript ES6+, i18n (国际化), AOS动画, Git, npm, ESLint, 响应式设计, 跨浏览器兼容",
         description: "基于React的我的个人作品集网站，展示清晰、响应式和以用户为中心的前端开发。",
         fullDescription: {
@@ -199,7 +199,7 @@ aboutDescription: [
             teyaJewelry: {
         name: "Téya Jewelry Store 线上首饰店",
         coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
+        gifImage: `${import.meta.env.BASE_URL}teya-case.mp4`,
         tech: " Next.js, React, Supabase, JavaScript, CSS Modules, Lucide Icons, Vercel, Next/Image, Next/Link, React Context",
         description: "Téya Jewelry Store 是一个为客户定制的在线珠宝商店项目，采用 Next.js 全栈开发。项目包含首页、产品分类、详情页、购物车、结账等完整电商流程。所有图片目前仅为参考，后续将替换为客户提供的正式素材。该项目仍在开发中，旨在实现优雅的 UI 与流畅的购物体验。",
         fullDescription: {
@@ -213,7 +213,7 @@ aboutDescription: [
       barWebsite: {
         name: "酒吧网站设计",
         coverImage: `${import.meta.env.BASE_URL}bar141.png`,
-        gifImage: `${import.meta.env.BASE_URL}bar-website.jpg`,
+        gifImage: `${import.meta.env.BASE_URL}bar141.png`,
         tech: "HTML, CSS",
         description: "一个现代化、响应式的酒吧网站，包含首页、关于我们、画廊和联系页面。网站突出展示了酒吧的氛围、团队和服务，为访客提供有趣且信息丰富的体验。",
         fullDescription: {
@@ -277,7 +277,7 @@ aboutDescription: [
       hangmanGame: {
         name: "Hänga gubbe-spel",
         coverImage: `${import.meta.env.BASE_URL}hangman-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}hangman.gif`,
+        gifImage: `${import.meta.env.BASE_URL}hangman.mp4`,
         tech: "React, React Router DOM, CSS3, API, JavaScript ES6+, localStorage, Responsiv Design",
         description: "Ett webbaserat Hänga gubbe-spel byggt med React och Vite, med användarautentisering och responsiv design. Spelare kan skapa konton och logga in innan de spelar, med ett intuitivt användargränssnitt förbättrat av anpassade visuella element.",
         fullDescription: {
@@ -286,12 +286,12 @@ aboutDescription: [
           challenges: "Datahantering: Säker localStorage-implementering, användarssessionshantering, felhantering. UX/UI: Formulärvalidering, felåterkoppling, sömlöst navigeringsflöde."
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
-        github: "https://github.com/Yiting-zh/project3"
+        github: "https://github.com/Yiting-zh/Hangman-Project"
       },
       genesisPortfolio: {
         name: "Genesis Portfolio",
         coverImage: `${import.meta.env.BASE_URL}genesis-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.gif`,
+        gifImage: `${import.meta.env.BASE_URL}genesis-portfolio.mp4`,
         tech: "HTML, CSS, SCSS, Prepros",
         description: "En portfoliowebbplats utvecklad från Figma-design, som visar flera projekt och kontaktinformation. Innehåller responsiv layout med hem-, projektdetalj- och kontaktsidor, med fokus på ren modern design och användarupplevelse.",
         fullDescription: {
@@ -305,7 +305,7 @@ aboutDescription: [
       portfolio: {
         name: "Yitings Portfolio",
         coverImage: `${import.meta.env.BASE_URL}yi-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}yi-case.gif`,
+        gifImage: `${import.meta.env.BASE_URL}yi-case.mp4`,
         tech: "React, Vite, CSS3, JavaScript ES6+, i18n (Internationalisering), AOS Animation, Git, npm, ESLint, Responsiv Design, Webbläsarkompatibilitet",
         description: "En React-baserad portfolio som visar ren, responsiv och användarcentrerad frontendutveckling.",
         fullDescription: {
@@ -318,7 +318,7 @@ aboutDescription: [
             teyaJewelry: {
         name: "Téya Jewelry Store",
         coverImage: `${import.meta.env.BASE_URL}teya-case.png`,
-        gifImage: `${import.meta.env.BASE_URL}teya-case.gif`,
+        gifImage: `${import.meta.env.BASE_URL}teya-case.mp4`,
         tech: "Next.js, React, Supabase, CSS Modules, Lucide Icons, Vercel, JavaScript",
         description: "Téya Jewelry Store är ett kundanpassat onlineprojekt för smycken, byggt med Next.js fullstack-utveckling. Webbplatsen innehåller startsida, produktkategorier, produktsidor, varukorg och kassa för ett komplett e-handelsflöde. Alla bilder är för närvarande platshållare och kommer att ersättas med kundens officiella material. Projektet är under utveckling och syftar till att skapa en elegant UI och smidig shoppingupplevelse.",
         fullDescription: {
