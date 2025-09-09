@@ -34,18 +34,15 @@ function Ball({ color, size, duration, index }) {
 }
 
 
-
 const BallsBackground = () => {
-  // 判断是否为移动端
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-
+  // Generate keyframes for each ball's movement with multiple random points
   React.useEffect(() => {
-    if (isMobile) return; // 移动端不生成动画 keyframes
     const style = document.createElement('style');
     let keyframes = '';
     balls.forEach((ball, i) => {
       const vw = 100 - ball.size / window.innerWidth * 100;
       const vh = 100 - ball.size / window.innerHeight * 100;
+      // Generate 5 random keyframes for each ball
       let frames = [];
       for (let k = 0; k < 5; k++) {
         const percent = Math.round((k / 4) * 100);
@@ -60,27 +57,8 @@ const BallsBackground = () => {
     return () => {
       document.head.removeChild(style);
     };
-  }, [isMobile]);
+  }, []);
 
-  if (isMobile) {
-    // 移动端用简单渐变或纯色背景
-    return (
-      <div
-        className="balls-bg"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          height: "100vh",
-          zIndex: -1,
-          background: "linear-gradient(135deg, #fde471 0%, #d5c4e0 100%)"
-        }}
-      />
-    );
-  }
-
-  // PC端显示动画球
   return (
     <div
       className="balls-bg"

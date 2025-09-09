@@ -96,14 +96,14 @@ aboutDescription: [
         coverImage: `${import.meta.env.BASE_URL}bar141.png`,
         gifImage: `${import.meta.env.BASE_URL}bar-website.jpg`,
         tech: "HTML, CSS",
-        description: "A website design for a bar.",
+        description: "A modern, responsive website for a bar, featuring pages for home, about us, gallery, and contact. The site highlights the bar’s atmosphere, team, and services, providing visitors with an engaging and informative experience.",
         fullDescription: {
-          learnings: "Gained experience with flexbox, layout, and responsive design.",
-          role: "Team Project, Responsible for landing page design and implementation.",
-          challenges: "Responsive layout and pixel-perfect styling."
+          learnings: "Gained practical experience in web layout, and user experience optimization. Improved skills in HTML, CSS, and collaborative development.",
+          role: "Responsible for designing and implementing the landing page, including layout, visual style, and user interaction.",
+          challenges: "Creating an appealing first impression, and integrating design elements with the overall team vision."
         },
-        viewLive: "https://example.com/project2",
-        github: "https://github.com/Yiting-zh/project2"
+       viewLive: "https://yiting-zh.github.io/BarWebsite/",
+        github: "https://github.com/Yiting-zh/BarWebsite"
       }
     },
 
@@ -215,14 +215,14 @@ aboutDescription: [
         coverImage: `${import.meta.env.BASE_URL}bar141.png`,
         gifImage: `${import.meta.env.BASE_URL}bar-website.jpg`,
         tech: "HTML, CSS",
-        description: "一个酒吧网站的设计。",
+        description: "一个现代化、响应式的酒吧网站，包含首页、关于我们、画廊和联系页面。网站突出展示了酒吧的氛围、团队和服务，为访客提供有趣且信息丰富的体验。",
         fullDescription: {
-          learnings: "获得了flexbox、布局和响应式设计的实践经验。",
-          role: "团队项目，负责落地页设计和实现。",
-          challenges: "响应式布局和像素级完美的样式。"
+          learnings: "在网页布局、响应式设计和用户体验优化方面获得了实际经验。提升了 HTML、CSS 以及团队协作开发的技能。",
+          role: "负责落地页的设计与实现，包括布局、视觉风格和用户交互。",
+          challenges: "确保跨设备兼容性，打造吸引人的第一印象，并将设计元素与团队整体愿景融合。"
         },
-        viewLive: "https://example.com/project2",
-        github: "https://github.com/Yiting-zh/project2"
+        viewLive: "https://yiting-zh.github.io/BarWebsite/",
+        github: "https://github.com/Yiting-zh/BarWebsite"
       }
     },
 
@@ -334,14 +334,14 @@ aboutDescription: [
         coverImage: `${import.meta.env.BASE_URL}bar141.png`,
         gifImage: `${import.meta.env.BASE_URL}bar-website.jpg`,
         tech: "HTML, CSS",
-        description: "En webbdesign för en bar.",
+        description: "En modern, responsiv webbplats för en bar med sidor för hem, om oss, galleri och kontakt. Webbplatsen lyfter fram barens atmosfär, team och tjänster, och ger besökare en engagerande och informativ upplevelse.",
         fullDescription: {
-          learnings: "Fick erfarenhet av flexbox, layout och responsiv design.",
-          role: "Grupprojekt, Ansvarig för landningssidans design och implementering.",
-          challenges: "Responsiv layout och pixelperfekt styling."
+          learnings: "Fick praktisk erfarenhet av webblayout, responsiv design och optimering av användarupplevelse. Förbättrade färdigheter i HTML, CSS och samarbetsutveckling.",
+          role: "Ansvarig för att designa och implementera landningssidan, inklusive layout, visuell stil och användarinteraktion.",
+          challenges: "Säkerställa kompatibilitet mellan olika enheter, skapa ett tilltalande första intryck och integrera designelement med teamets övergripande vision."
         },
-        viewLive: "https://example.com/project2",
-        github: "https://github.com/Yiting-zh/project2"
+        viewLive: "https://yiting-zh.github.io/BarWebsite/",
+        github: "https://github.com/Yiting-zh/BarWebsite"
       }
     },
 
