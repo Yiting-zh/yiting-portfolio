@@ -172,6 +172,7 @@
     flex: 1;
     flex-direction: column;
     align-items: flex-start;
+    min-height: 400px; /* 增加最小高度 */
     height: auto;
     padding: 32px;
     background: none;
@@ -192,7 +193,7 @@
   .project-card.card-detail video {
     width: 100%;
     height: 220px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     object-fit: contain;
     border-radius: 8px;
   }
@@ -343,26 +344,78 @@
     margin-bottom: 32px;
   }
   
+  /* 封面卡片样式 */
   .project-card.card-cover {
-    height: 400px;
+    height: 300px;
   }
 
-  .project-card.card-cover img {
+  /* 封面图片和视频样式 */
+  .project-card.card-cover img,
+  .project-card.card-cover video {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
   }
 
-  /* 隐藏封面卡片的悬浮链接按钮 */
-  .project-card.card-cover .project-card-detail .project-links {
-    display: none;
-  }
-  
-  /* 覆盖层图片 */
-  .project-card-detail img {
+  /* 详情卡片视频样式 */
+  .project-card.card-detail video {
     width: 100%;
-    height: 150px; /* 略小于卡片图片 */
+    height: 200px;
     object-fit: contain;
-    margin-bottom: 0; /* 去掉底部边距 */
+    border-radius: 8px;
+    margin: 0 0 20px 0;
+    background: rgba(247, 217, 168, 0.03);
+  }
+
+  /* 项目信息调整 */
+  .project-card.card-detail .project-card-info {
+    padding: 20px;
+    min-height: 300px; /* 确保有足够的空间显示内容 */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 调整文字间距 */
+  .project-card.card-detail .project-card-info h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .project-card.card-detail .project-card-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  /* 技术标签样式 */
+  .project-card.card-detail .project-tech span {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  /* 链接按钮样式 */
+  .project-card.card-detail .project-links,
+  .project-card-detail .project-links {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 20px;
+  }
+
+  .project-card.card-detail .project-links a,
+  .project-card-detail .project-links a {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(247, 217, 168, 0.1);
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .project-card.card-detail .project-links a:hover,
+  .project-card-detail .project-links a:hover {
+    background: var(--color-primary);
+    color: var(--color-accent2);
   }
 }
