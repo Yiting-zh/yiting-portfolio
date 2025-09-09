@@ -37,7 +37,7 @@ function Projects({ dict }) {
                         <div className="projects-grid">
                             {projects.map((project) => (
                                 <div className="project-row" key={project.name}>
-                                    {/* 大卡片 - 静态图片和完整信息 */}
+                                    {/* 大卡片 - 响应式图片和完整信息 */}
                                     <div className="project-card card-cover" data-aos="fade-up">
                                         {/* 使用媒体查询在CSS中控制的图片 */}
                                         <img 
