@@ -11,23 +11,26 @@ const balls = [
   { color: 'rgba(186, 230, 213, 0.7)', size: 200, duration: 12 },
 ];
 
-function Ball({ color, size, top, left, animate, duration, index }) {
-  // PC端动画，移动端静止
-  const style = {
-    background: color,
-    width: size,
-    height: size,
-    filter: "blur(80px)",
-    position: "absolute",
-    borderRadius: "50%",
-    pointerEvents: "none",
-    top: top || 0,
-    left: left || 0,
-  };
-  if (animate) {
-    style.animation = `ball-move-${index} ${duration}s linear infinite alternate`;
-  }
-  return <div className="ball-bg" style={style} />;
+function Ball({ color, size, duration, index }) {
+  // Each ball gets a unique animation name for staggered movement
+  const animName = `ball-move-${index}`;
+  return (
+    <div
+      className="ball-bg"
+      style={{
+        background: color,
+        width: size,
+        height: size,
+        filter: "blur(80px)",
+        position: "absolute",
+        borderRadius: "50%",
+        pointerEvents: "none",
+        animation: `${animName} ${duration}s linear infinite alternate`,
+        top: 0,
+        left: 0,
+      }}
+    />
+  );
 }
 
 
@@ -35,25 +38,26 @@ function Ball({ color, size, top, left, animate, duration, index }) {
 const BallsBackground = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
-  // 移动端静止球：随机分布
+  // 移动端：静止圆球，随机位置，无动画，保留渐变背景
   const [mobileBalls, setMobileBalls] = React.useState([]);
-
   React.useEffect(() => {
-    if (isMobile) {
-      // 生成随机位置的球
-      const ballsWithPos = balls.map(ball => {
-        const vw = window.innerWidth - ball.size;
-        const vh = window.innerHeight - ball.size;
-        return {
-          ...ball,
-          left: Math.random() * vw,
-          top: Math.random() * vh,
-        };
-      });
-      setMobileBalls(ballsWithPos);
-      return;
-    }
-    // PC端动画球
+    if (!isMobile) return;
+    // 计算圆球随机位置（vw/vh），每次刷新都不同
+    const positions = balls.map(ball => {
+      const vw = 100 - ball.size / window.innerWidth * 100;
+      const vh = 100 - ball.size / window.innerHeight * 100;
+      return {
+        left: Math.random() * vw,
+        top: Math.random() * vh,
+        ...ball
+      };
+    });
+    setMobileBalls(positions);
+  }, [isMobile]);
+
+  // PC端动画球
+  React.useEffect(() => {
+    if (isMobile) return;
     const style = document.createElement('style');
     let keyframes = '';
     balls.forEach((ball, i) => {
@@ -76,7 +80,7 @@ const BallsBackground = () => {
   }, [isMobile]);
 
   if (isMobile) {
-    // 移动端静止球叠加渐变背景
+    // 只用主题背景 + 静止圆球
     return (
       <div
         className="balls-bg"
@@ -87,25 +91,23 @@ const BallsBackground = () => {
           width: "100vw",
           height: "100vh",
           zIndex: -1,
-          background:
-            "radial-gradient(circle at 20% 30%, rgba(253,220,113,0.7) 0%, transparent 60%)," +
-            "radial-gradient(circle at 80% 20%, rgba(213,196,224,0.7) 0%, transparent 60%)," +
-            "radial-gradient(circle at 60% 70%, rgba(249,214,193,0.7) 0%, transparent 60%)," +
-            "radial-gradient(circle at 40% 80%, rgba(255,222,173,0.7) 0%, transparent 60%)," +
-            "radial-gradient(circle at 70% 50%, rgba(255,182,193,0.6) 0%, transparent 60%)," +
-            "radial-gradient(circle at 30% 60%, rgba(186,230,213,0.7) 0%, transparent 60%)," +
-            "linear-gradient(135deg, #fde471 0%, #d5c4e0 100%)"
         }}
       >
         {mobileBalls.map((ball, i) => (
-          <Ball
+          <div
             key={i}
-            color={ball.color}
-            size={ball.size}
-            top={ball.top}
-            left={ball.left}
-            animate={false}
-            index={i}
+            className="ball-bg"
+            style={{
+              background: ball.color,
+              width: ball.size,
+              height: ball.size,
+              filter: "blur(80px)",
+              position: "absolute",
+              borderRadius: "50%",
+              pointerEvents: "none",
+              top: `${ball.top}vh`,
+              left: `${ball.left}vw`,
+            }}
           />
         ))}
       </div>
@@ -132,7 +134,6 @@ const BallsBackground = () => {
           color={ball.color}
           size={ball.size}
           duration={ball.duration}
-          animate={true}
           index={i}
         />
       ))}
