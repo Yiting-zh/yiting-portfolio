@@ -12,6 +12,17 @@ const Hero = ({ dict }) => (
       </div>
       <div className="hero-right" data-aos="fade-left" data-aos-delay="200">
         <picture>
+          {/* 移动端小图 */}
+          <source
+            media="(max-width: 768px)"
+            srcSet={`${import.meta.env.BASE_URL}Hero-small.webp`}
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcSet={`${import.meta.env.BASE_URL}Hero-small.png`}
+          />
+          {/* 桌面端大图 */}
           <source
             srcSet={`${import.meta.env.BASE_URL}Hero.webp`}
             type="image/webp"
@@ -20,7 +31,9 @@ const Hero = ({ dict }) => (
             src={`${import.meta.env.BASE_URL}Hero.png`} 
             alt="Hero" 
             className="hero-image"
-            loading="eager" 
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </picture>
       </div>

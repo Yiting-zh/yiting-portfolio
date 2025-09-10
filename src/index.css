@@ -252,6 +252,17 @@ section:first-of-type {
 .hero-image {
   max-width: 100%;
   height: auto;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* 添加图片占位符效果 */
+.hero-image,
+.about-image {
+  background-color: rgba(247, 217, 168, 0.1);
+  transition: opacity 0.3s ease;
 }
 
 /* 标题行 */
@@ -519,11 +530,9 @@ section:first-of-type {
 /* 链接样式 */
 .project-links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   margin-top: auto;
   z-index: 1;
-  width: 100%;
-  justify-content: flex-start;
 }
 
 .project-links a {
@@ -531,20 +540,10 @@ section:first-of-type {
   font-weight: 600;
   color: var(--color-primary);
   text-decoration: none;
-  padding: 8px 24px;
-  border: 2px solid var(--color-primary);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  background: var(--color-bg);
+  transition: color 0.2s ease;
 
   &:hover {
-    background: var(--color-primary);
-    color: var(--color-bg);
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: translateY(0);
+    color: var(--color-primary-light);
   }
 }
 

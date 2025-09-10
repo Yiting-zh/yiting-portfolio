@@ -45,6 +45,7 @@ function Projects({ dict }) {
                                             <source
                                                 srcSet={project.coverImage.replace('.png', '.webp')}
                                                 type="image/webp"
+                                                media="(min-width: 501px)"
                                             />
                                             {/* WebP 格式 - 小图 (500px及以下) */}
                                             <source 
@@ -61,20 +62,24 @@ function Projects({ dict }) {
                                             <img 
                                                 src={project.coverImage} 
                                                 alt={project.name} 
-                                                loading="lazy"
+                                                loading={project.name === projects[0].name ? "eager" : "lazy"}
+                                                fetchpriority={project.name === projects[0].name ? "high" : "auto"}
+                                                decoding="async"
+                                                width="800"
+                                                height="480"
                                             />
                                         </picture>
                                         <div className="project-card-detail">
-                                            <picture>
-                                                {/* GIF图片也添加懒加载 */}
-                                                <video 
-                                                    src={project.gifImage} 
-                                                    autoPlay
-                                                    loop
-                                                    muted
-                                                    playsInline
-                                                />
-                                            </picture>
+                                            {/* 视频预加载设置 */}
+                                            <video 
+                                                src={project.gifImage} 
+                                                autoPlay
+                                                loop
+                                                muted
+                                                playsInline
+                                                preload="none"
+                                                loading="lazy"
+                                            />
                                             <div className="project-links">
                                                 {project.viewLive && (
                                                     <a
