@@ -4,7 +4,18 @@ const About = ({ dict }) => (
       <h2 className="heading-h2">{dict.aboutMe}</h2>
       <div className="about-info">
         <div className="about-left" data-aos="fade-right">
-          <img src={`${import.meta.env.BASE_URL}Yiting.png`} alt="About Me" className="about-image" />
+          <picture>
+            <source
+              srcSet={`${import.meta.env.BASE_URL}Yiting.webp`}
+              type="image/webp"
+            />
+            <img 
+              src={`${import.meta.env.BASE_URL}Yiting.png`} 
+              alt="About Me" 
+              className="about-image"
+              loading="lazy"
+            />
+          </picture>
         </div>
         <div className="about-right" data-aos="fade-left">
           {dict.aboutDescription.map((paragraph, idx) => (
@@ -16,46 +27,34 @@ const About = ({ dict }) => (
         <h3 className="heading-h3">{dict.skills}</h3>
 
         <div className="skills-container">
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}figma.png`} alt="Figma" className="logo-pic" />
-            <p className="skills-text">Figma</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}html5.png`} alt="HTML" className="logo-pic" />
-            <p className="skills-text">HTML</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}css.png`} alt="CSS" className="logo-pic" />
-            <p className="skills-text">CSS</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}javascript.png`} alt="JavaScript" className="logo-pic" />
-            <p className="skills-text">JavaScript</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}react.png`} alt="React" className="logo-pic" />
-            <p className="skills-text">React</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}git.png`} alt="Git & GitHub" className="logo-pic" />
-            <p className="skills-text">Git & GitHub</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}uxui.png`} alt="UX/UI Design" className="logo-pic" />
-            <p className="skills-text">UX/UI Design</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}sass.png`} alt="Sass" className="logo-pic" />
-            <p className="skills-text">Sass</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}nextjs.png`} alt="Next.js" className="logo-pic" />
-            <p className="skills-text">Next.js</p>
-          </div>
-          <div className="skills-logo">
-            <img src={`${import.meta.env.BASE_URL}supabase.png`} alt="Supabase" className="logo-pic" />
-            <p className="skills-text">Supabase</p>
-          </div>
+          {[
+            { name: 'Figma', img: 'figma' },
+            { name: 'HTML', img: 'html5' },
+            { name: 'CSS', img: 'css' },
+            { name: 'JavaScript', img: 'javascript' },
+            { name: 'React', img: 'react' },
+            { name: 'Git & GitHub', img: 'git' },
+            { name: 'UX/UI Design', img: 'uxui' },
+            { name: 'Sass', img: 'sass' },
+            { name: 'Next.js', img: 'nextjs' },
+            { name: 'Supabase', img: 'supabase' }
+          ].map((skill) => (
+            <div className="skills-logo" key={skill.name}>
+              <picture>
+                <source
+                  srcSet={`${import.meta.env.BASE_URL}${skill.img}.webp`}
+                  type="image/webp"
+                />
+                <img 
+                  src={`${import.meta.env.BASE_URL}${skill.img}.png`}
+                  alt={skill.name}
+                  className="logo-pic"
+                  loading="lazy"
+                />
+              </picture>
+              <p className="skills-text">{skill.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

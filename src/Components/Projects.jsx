@@ -39,14 +39,25 @@ function Projects({ dict }) {
                                 <div className="project-row" key={project.name}>
                                     {/* 大卡片 - 响应式图片和完整信息 */}
                                     <div className="project-card card-cover" data-aos="fade-up">
-                                        {/* 使用 picture 元素实现响应式图片加载 */}
+                                        {/* 使用 picture 元素实现响应式图片加载，支持 WebP */}
                                         <picture>
-                                            {/* 手机端使用 small 图片 (500px及以下) */}
+                                            {/* WebP 格式 - 大图 */}
+                                            <source
+                                                srcSet={project.coverImage.replace('.png', '.webp')}
+                                                type="image/webp"
+                                            />
+                                            {/* WebP 格式 - 小图 (500px及以下) */}
                                             <source 
-                                                media="(max-width: 500px)" 
+                                                media="(max-width: 500px)"
+                                                srcSet={project.coverImage.replace('.png', '-small.webp')}
+                                                type="image/webp"
+                                            />
+                                            {/* 原始格式 - 小图 (500px及以下) */}
+                                            <source 
+                                                media="(max-width: 500px)"
                                                 srcSet={project.coverImage.replace('.png', '-small.png')}
                                             />
-                                            {/* 默认使用原始图片 */}
+                                            {/* 原始格式 - 默认图片 */}
                                             <img 
                                                 src={project.coverImage} 
                                                 alt={project.name} 

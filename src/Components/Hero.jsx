@@ -11,7 +11,18 @@ const Hero = ({ dict }) => (
         </p>
       </div>
       <div className="hero-right" data-aos="fade-left" data-aos-delay="200">
-        <img src={`${import.meta.env.BASE_URL}Hero.png`} alt="Hero" className="hero-image" />
+        <picture>
+          <source
+            srcSet={`${import.meta.env.BASE_URL}Hero.webp`}
+            type="image/webp"
+          />
+          <img 
+            src={`${import.meta.env.BASE_URL}Hero.png`} 
+            alt="Hero" 
+            className="hero-image"
+            loading="eager" 
+          />
+        </picture>
       </div>
     </div>
   </section>
