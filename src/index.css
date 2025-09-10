@@ -258,10 +258,9 @@ section:first-of-type {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-/* 添加图片占位符效果 */
+/* 图片过渡效果 */
 .hero-image,
 .about-image {
-  background-color: rgba(247, 217, 168, 0.1);
   transition: opacity 0.3s ease;
 }
 

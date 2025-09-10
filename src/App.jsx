@@ -1,24 +1,32 @@
 import { LANGUAGES } from "./i18n";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import BallsBackground from './Components/BallsBackground';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
-import About from './Components/About';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import BackToTop from './Components/BackToTop';
-import './index.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Loader from './Loader';
+
+// 懒加载非首屏组件
+const About = lazy(() => import('./Components/About'));
+const Projects = lazy(() => import('./Components/Projects'));
+const Contact = lazy(() => import('./Components/Contact'));
+const BackToTop = lazy(() => import('./Components/BackToTop'));
+
+// 预加载 AOS
+const loadAOS = () => import('aos').then((AOS) => {
+  import('aos/dist/aos.css');
+  AOS.default.init({ once: true, duration: 800 });
+});
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [lang, setLang] = useState("en"); // 默认英文
 
   useEffect(() => {
-    AOS.init({ once: true, duration: 800 });
-  }, []);
+    if (!loading) {
+      // 页面加载完成后再加载 AOS
+      loadAOS();
+    }
+  }, [loading]);
 
   return (
     <>
@@ -27,10 +35,12 @@ function App() {
       <div style={{ opacity: loading ? 0 : 1, transition: "opacity 0.6s" }}>
         <BallsBackground />
         <Hero dict={LANGUAGES[lang]} />
-        <Projects dict={LANGUAGES[lang]} />
-        <About dict={LANGUAGES[lang]} />
-        <Contact dict={LANGUAGES[lang]} />
-        <BackToTop />
+        <Suspense fallback={<div style={{ height: '100vh' }} />}>
+          <Projects dict={LANGUAGES[lang]} />
+          <About dict={LANGUAGES[lang]} />
+          <Contact dict={LANGUAGES[lang]} />
+          <BackToTop />
+        </Suspense>
       </div>
     </>
   );

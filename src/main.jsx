@@ -4,8 +4,10 @@ import './index.css'
 import './responsive.css'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
+// 创建根元素并渲染应用
+const root = createRoot(document.getElementById('root'));
+root.render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+  </StrictMode>
+);
