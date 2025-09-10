@@ -5,17 +5,6 @@ const About = ({ dict }) => (
       <div className="about-info">
         <div className="about-left" data-aos="fade-right">
           <picture>
-            {/* 移动端小图 */}
-            <source
-              media="(max-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}Yiting-small.webp`}
-              type="image/webp"
-            />
-            <source
-              media="(max-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}Yiting-small.png`}
-            />
-            {/* 桌面端大图 */}
             <source
               srcSet={`${import.meta.env.BASE_URL}Yiting.webp`}
               type="image/webp"

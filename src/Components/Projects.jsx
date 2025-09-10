@@ -62,8 +62,8 @@ function Projects({ dict }) {
                                             <img 
                                                 src={project.coverImage} 
                                                 alt={project.name} 
-                                                loading={project.name === projects[0].name ? "eager" : "lazy"}
-                                                fetchpriority={project.name === projects[0].name ? "high" : "auto"}
+                                                loading="eager"
+                                                fetchpriority="high"
                                                 decoding="async"
                                                 width="800"
                                                 height="480"
@@ -79,6 +79,7 @@ function Projects({ dict }) {
                                                 playsInline
                                                 preload="none"
                                                 loading="lazy"
+                                                fetchpriority="low"
                                             />
                                             <div className="project-links">
                                                 {project.viewLive && (
