@@ -17,7 +17,6 @@ aboutDescription: [
   "Hi, I'm Yiting 😺🌿", 
   "A frontend developer with a background in UX design and marketing.",
   "I’m passionate about blending design and technology to create digital experiences that are both beautiful and functional.",
-  "Curiosity and creativity are my biggest drivers — they push me to explore, iterate, and find joy in building.",
   "Curiosity and creativity keep me exploring, iterating, and finding joy in every build.",
   "Beyond coding, you’ll often find me outdoors, experimenting with recipes in the kitchen, or painting — hobbies that bring fresh perspectives into my work and remind me to always stay open and playful."
 ],
@@ -138,7 +137,7 @@ aboutDescription: [
     "作为一名前端开发者，我还有着 UX 设计和市场营销的背景。这样的经历让我在开发时能够更好地理解用户需求，平衡技术实现与用户体验。",
     "我热衷于将设计与技术完美融合。在我的项目中，你会看到简约优雅的界面设计、流畅自然的交互体验，以及精心打磨的技术细节 ✨",
     "好奇心和创造力是我的动力。每个项目都是一次成长的机会，让我在解决挑战的过程中不断探索和突破，收获满满的成就感。",
-    "工作之外，我喜欢亲近大自然、钻研美食、享受绘画时光。这些生活中的小确幸不仅平衡了工作与生活，也为我的技术创作带来了更多灵感和新鲜视角 🎨"
+    "休闲时间我喜欢亲近大自然、钻研美食、享受绘画时光。这些生活中的小确幸不仅平衡了工作与生活，也为我的技术创作带来了更多灵感和新鲜视角 🎨"
   ],
     skills: "技能",
 
