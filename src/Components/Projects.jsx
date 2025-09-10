@@ -41,21 +41,37 @@ function Projects({ dict }) {
                                     <div className="project-card card-cover" data-aos="fade-up">
                                         {/* 使用 picture 元素实现响应式图片加载，支持 WebP */}
                                         <picture>
-                                            {/* WebP 格式 - 大图 */}
+                                            {/* WebP 格式 - 大图 (1024px以上) */}
                                             <source
                                                 srcSet={project.coverImage.replace('.png', '.webp')}
                                                 type="image/webp"
-                                                media="(min-width: 501px)"
+                                                media="(min-width: 1025px)"
                                             />
-                                            {/* WebP 格式 - 小图 (500px及以下) */}
+                                            {/* WebP 格式 - 中图 (768px-1024px) */}
+                                            <source
+                                                srcSet={project.coverImage.replace('.png', '-medium.webp')}
+                                                type="image/webp"
+                                                media="(min-width: 769px) and (max-width: 1024px)"
+                                            />
+                                            {/* WebP 格式 - 小图 (768px及以下) */}
                                             <source 
-                                                media="(max-width: 500px)"
+                                                media="(max-width: 768px)"
                                                 srcSet={project.coverImage.replace('.png', '-small.webp')}
                                                 type="image/webp"
                                             />
-                                            {/* 原始格式 - 小图 (500px及以下) */}
+                                            {/* PNG 格式 - 大图 (1024px以上) */}
+                                            <source
+                                                srcSet={project.coverImage}
+                                                media="(min-width: 1025px)"
+                                            />
+                                            {/* PNG 格式 - 中图 (768px-1024px) */}
+                                            <source
+                                                srcSet={project.coverImage.replace('.png', '-medium.png')}
+                                                media="(min-width: 769px) and (max-width: 1024px)"
+                                            />
+                                            {/* PNG 格式 - 小图 (768px及以下) */}
                                             <source 
-                                                media="(max-width: 500px)"
+                                                media="(max-width: 768px)"
                                                 srcSet={project.coverImage.replace('.png', '-small.png')}
                                             />
                                             {/* 原始格式 - 默认图片 */}

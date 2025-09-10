@@ -5,10 +5,29 @@ const About = ({ dict }) => (
       <div className="about-info">
         <div className="about-left" data-aos="fade-right">
           <picture>
+            {/* WebP 格式 - 大图 (1024px以上) */}
             <source
               srcSet={`${import.meta.env.BASE_URL}Yiting.webp`}
               type="image/webp"
+              media="(min-width: 1025px)"
             />
+            {/* WebP 格式 - 中图 (768px-1024px) */}
+            <source
+              srcSet={`${import.meta.env.BASE_URL}Yiting-medium.webp`}
+              type="image/webp"
+              media="(min-width: 769px) and (max-width: 1024px)"
+            />
+            {/* PNG 格式 - 大图 (1024px以上) */}
+            <source
+              srcSet={`${import.meta.env.BASE_URL}Yiting.png`}
+              media="(min-width: 1025px)"
+            />
+            {/* PNG 格式 - 中图 (768px-1024px) */}
+            <source
+              srcSet={`${import.meta.env.BASE_URL}Yiting-medium.png`}
+              media="(min-width: 769px) and (max-width: 1024px)"
+            />
+            {/* 默认图片 */}
             <img 
               src={`${import.meta.env.BASE_URL}Yiting.png`} 
               alt="About Me" 

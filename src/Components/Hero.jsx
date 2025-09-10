@@ -22,6 +22,16 @@ const Hero = ({ dict }) => (
             media="(max-width: 768px)"
             srcSet={`${import.meta.env.BASE_URL}Hero-small.png`}
           />
+          {/* 平板端中图 */}
+          <source
+            media="(max-width: 1024px)"
+            srcSet={`${import.meta.env.BASE_URL}Hero-medium.webp`}
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1024px)"
+            srcSet={`${import.meta.env.BASE_URL}Hero-medium.png`}
+          />
           {/* 桌面端大图 */}
           <source
             srcSet={`${import.meta.env.BASE_URL}Hero.webp`}
