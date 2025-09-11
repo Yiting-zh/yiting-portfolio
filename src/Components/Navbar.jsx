@@ -17,7 +17,13 @@ function Navbar({ lang, setLang, dict }) {
           <a href="#about" onClick={() => setOpen(false)}>{dict.about}</a>
           <a href="#projects" onClick={() => setOpen(false)}>{dict.projectsLabel}</a>
           <a href="#contact" onClick={() => setOpen(false)}>{dict.contact}</a>
-          <a href="#">{dict.cv}</a>
+          <a 
+            href={`${import.meta.env.BASE_URL}YitingZhang_CV.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {dict.cv}
+          </a>
         </div>
         <div className={`hamburger${open ? " open" : ""}`} onClick={() => setOpen(!open)}>
           <span />

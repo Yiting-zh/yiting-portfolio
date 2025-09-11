@@ -59,7 +59,8 @@ const About = ({ dict }) => (
             { name: 'UX/UI Design', img: 'uxui' },
             { name: 'Sass', img: 'sass' },
             { name: 'Next.js', img: 'nextjs' },
-            { name: 'Supabase', img: 'supabase' }
+            { name: 'Supabase', img: 'supabase' },
+            { name: 'Tailwind CSS', img: 'tailwind' }
           ].map((skill) => (
             <div className="skills-logo" key={skill.name}>
               <picture>
