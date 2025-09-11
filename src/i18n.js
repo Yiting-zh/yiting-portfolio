@@ -162,7 +162,7 @@ aboutDescription: [
         description: "使用React和Vite构建的网页版趣味猜词游戏，具有用户认证系统和响应式设计。玩家可以创建账号并登录后开始游戏，直观的用户界面通过自定义视觉元素增强了用户体验。",
         fullDescription: {
           learnings: "实现客户端身份验证、React状态管理和路由、表单处理和验证、响应式设计原则以及基于组件的架构。",
-          role: "负责身份验证系统的开发，包括登录/注册组件、本地数据持久化、用户认证流程和认证页面的响应式UI。",
+          role: "团队项目 — 负责用户认证系统，登录/注册流程",
           challenges: "数据管理：实现安全的localStorage存储、用户会话处理、错误情况管理。用户体验/界面：表单验证、错误反馈、流畅的导航流程。"
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
@@ -176,7 +176,7 @@ aboutDescription: [
         description: "基于Figma设计稿开发的个人作品集网站，展示多个项目作品和联系方式。采用响应式布局设计，包含首页、项目详情和联系页面，整体风格简约现代，注重视觉设计和用户体验。",
         fullDescription: {
           learnings: "深入学习了CSS布局技术、SCSS模块化开发和响应式设计原则，特别是掌握了CSS Grid的实践应用。提升了前端开发规范意识和代码组织能力。",
-          role: "独立项目",
+          role: "前端开发",
           challenges: "精确还原Figma设计稿，确保跨屏幕尺寸的适配性。通过深入学习CSS Grid实现复杂的图片布局效果。优化多页面结构和样式文件的管理，提高代码可维护性。实现细节动画和交互效果以提升用户体验。"
         },
         viewLive: "https://yiting-zh.github.io/genesis-portfolio-design/",
@@ -190,7 +190,7 @@ aboutDescription: [
         description: "基于React的我的个人作品集网站，展示清晰、响应式和以用户为中心的前端开发。",
         fullDescription: {
           learnings: "掌握了React组件开发，实现了多语言支持，集成了平滑动画，并使用Vite优化了性能。",
-          role: "独立项目",
+          role: "UI/UX设计师兼开发者",
           challenges: "创建响应式布局，实现优雅的动画效果，尤其是背景动效的实现，以及对 useEffect 的深入运用（动画与数据逻辑）。确保在不同语言和设备上的一致性能表现。"
         },
         github: "https://github.com/Yiting-zh/yiting-portfolio"
@@ -203,7 +203,7 @@ aboutDescription: [
         description: "Téya Jewelry Store 是一个为客户定制的在线珠宝商店项目，采用 Next.js 全栈开发。项目包含首页、产品分类、详情页、购物车、结账等完整电商流程。所有图片目前仅为参考，后续将替换为客户提供的正式素材。该项目仍在开发中，旨在实现优雅的 UI 与流畅的购物体验。",
         fullDescription: {
           learnings: "理解 Next.js 的全栈开发模式，包括前端页面与后端数据交互。掌握 React 组件状态管理与上下文同步（如购物车 CartContext）。实践了电商业务流程的前端与后端逻辑串联。熟悉 Supabase 作为后端服务的集成与数据管理。",
-          role: "独立全栈开发者",
+          role: "UI/UX设计师兼全栈开发者",
           challenges: "购物车与结账流程的数据同步与状态管理，确保用户操作的实时反馈。产品卡片与购物车侧边栏（CartSidebar）的交互逻辑设计与实现。全栈架构下，前后端数据流的衔接与安全性处理。UI 设计与响应式布局，兼顾美观与易用性。"
         },
         viewLive: "https://teya-jewelry-store.vercel.app/",
@@ -281,7 +281,7 @@ aboutDescription: [
         description: "Ett webbaserat Hänga gubbe-spel byggt med React och Vite, med användarautentisering och responsiv design. Spelare kan skapa konton och logga in innan de spelar, med ett intuitivt användargränssnitt förbättrat av anpassade visuella element.",
         fullDescription: {
           learnings: "Implementering av klientautentisering, React-tillståndshantering och routing, formulärhantering och validering, responsiva designprinciper och komponentbaserad arkitektur.",
-          role: "Ledde utvecklingen av autentiseringssystemet, inklusive inloggnings-/registreringskomponenter, lokal datapersistens, användarautentiseringsflöde och responsivt UI för auth-sidor.",
+          role: "Teamprojekt — Ansvarig för användarautentiseringssystem, inloggnings-/registreringsflöde",
           challenges: "Datahantering: Säker localStorage-implementering, användarssessionshantering, felhantering. UX/UI: Formulärvalidering, felåterkoppling, sömlöst navigeringsflöde."
         },
         viewLive: "https://xositax.github.io/Hangman-Project/",
@@ -295,7 +295,7 @@ aboutDescription: [
         description: "En portfoliowebbplats utvecklad från Figma-design, som visar flera projekt och kontaktinformation. Innehåller responsiv layout med hem-, projektdetalj- och kontaktsidor, med fokus på ren modern design och användarupplevelse.",
         fullDescription: {
           learnings: "Fördjupad förståelse för CSS-layouter, SCSS-modularitet och responsiv webbdesign, särskilt behärskande av CSS Grid-implementering. Förbättrade frontend-utvecklingsstandarder och kodorganiseringsförmåga.",
-          role: "Soloprojekt",
+          role: "Frontend-utvecklare",
           challenges: "Exakt översättning av Figma-design till webb samtidigt som kompatibilitet mellan skärmar säkerställs. Behärska CSS Grid för komplexa fotolayouter. Hantera flersidig struktur och stilfiler för underhållbarhet. Implementera detaljerade animationer och interaktioner för förbättrad användarupplevelse."
         },
         viewLive: "https://yiting-zh.github.io/genesis-portfolio-design/",
@@ -309,7 +309,7 @@ aboutDescription: [
         description: "En React-baserad portfolio som visar ren, responsiv och användarcentrerad frontendutveckling.",
         fullDescription: {
           learnings: "Behärskade React-komponenter, implementerade flerspråksstöd, integrerade smidiga animationer och optimerade prestanda med Vite.",
-          role: "Soloprojekt",
+          role: "UI/UX-designer och utvecklare",
           challenges: "Skapande av sömlösa responsiva layouter, implementering av eleganta animationer och säkerställande av konsekvent prestanda över olika språk och enheter."
         },
         github: "https://github.com/Yiting-zh/yiting-portfolio"
@@ -322,7 +322,7 @@ aboutDescription: [
         description: "Téya Jewelry Store är ett kundanpassat onlineprojekt för smycken, byggt med Next.js fullstack-utveckling. Webbplatsen innehåller startsida, produktkategorier, produktsidor, varukorg och kassa för ett komplett e-handelsflöde. Alla bilder är för närvarande platshållare och kommer att ersättas med kundens officiella material. Projektet är under utveckling och syftar till att skapa en elegant UI och smidig shoppingupplevelse.",
         fullDescription: {
           learnings: "Fördjupad förståelse för Next.js fullstack-utveckling, inklusive frontend-sidor och backend-datahantering. Behärskade React-komponenters tillståndshantering och kontextsynkronisering (t.ex. CartContext). Praktiserade kopplingen mellan frontend- och backendlogik för e-handelsflöden. Blev bekant med integration av Supabase som backendtjänst och databas.",
-          role: "Solo Fullstackutvecklare",
+          role: "UI/UX-designer och fullstackutvecklare",
           challenges: "Synkronisering av varukorg och kassadata samt tillståndshantering för att ge användaren direkt feedback. Design och implementation av interaktionslogik för produktkort och CartSidebar. Hantering av dataflöde och säkerhet i fullstack-arkitektur. UI-design och responsiv layout med fokus på både estetik och användarvänlighet."
         },
         viewLive: "https://teya-jewelry-store.vercel.app/",
