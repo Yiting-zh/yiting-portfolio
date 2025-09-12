@@ -158,6 +158,54 @@ section:first-of-type {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* 下拉菜单共享样式 */
+.cv-dropdown,
+.navbar-lang-switch {
+  position: relative;
+  display: inline-block;
+}
+
+.cv-menu,
+.navbar-lang-switch .dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: var(--color-bg);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000;
+  min-width: 120px;
+  padding: 8px 0;
+}
+
+.cv-menu .cv-option,
+.navbar-lang-switch .dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background-color 0.2s, color 0.2s;
+  font-family: var(--font-body);
+  font-size: 14px;
+  margin: 0;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cv-menu .cv-option:hover,
+.navbar-lang-switch .dropdown-item:hover {
+  background-color: var(--color-accent2);
+  color: var(--color-primary);
+  padding-right: 16px; /* 确保悬停状态下保持相同的内边距 */
+}
 
 /*====================================
   5. 排版样式
