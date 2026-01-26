@@ -9,7 +9,7 @@ export const LANGUAGES = {
     // Hero
     welcome: "Hi!",
     heroName: "I'm Yiting",
-    heroIntro: "Frontend Developer · UX Design Background · Nature & Creativity Enthusiast 🌿🎨",
+    heroIntro: "Frontend Developer · UX UI Design · Nature & Creativity Enthusiast 🌿🎨",
 
     // About
     aboutMe: "About Me",
@@ -93,7 +93,7 @@ aboutDescription: [
       barWebsite: {
         name: "Bar website design",
         coverImage: `${import.meta.env.BASE_URL}bar141.png`,
-        gifImage: `${import.meta.env.BASE_URL}bar-website.jpg`,
+        gifImage: `${import.meta.env.BASE_URL}bar-website.mp4`,
         tech: "HTML, CSS",
         description: "A modern, responsive website for a bar, featuring pages for home, about us, gallery, and contact. The site highlights the bar’s atmosphere, team, and services, providing visitors with an engaging and informative experience.",
         fullDescription: {
@@ -212,7 +212,7 @@ aboutDescription: [
       barWebsite: {
         name: "酒吧网站设计",
         coverImage: `${import.meta.env.BASE_URL}bar141.png`,
-        gifImage: `${import.meta.env.BASE_URL}bar141.png`,
+        gifImage: `${import.meta.env.BASE_URL}bar-website.mp4`,
         tech: "HTML, CSS",
         description: "一个现代化、响应式的酒吧网站，包含首页、关于我们、画廊和联系页面。网站突出展示了酒吧的氛围、团队和服务，为访客提供有趣且信息丰富的体验。",
         fullDescription: {
@@ -253,7 +253,7 @@ aboutDescription: [
     aboutMe: "Om mig",
       aboutDescription: [
         "Hej, jag heter Yiting 😺🌿",
-        "Jag är en frontend-utvecklare med bakgrund inom UX-design och marknadsföring.",
+        "Jag är en frontend-utvecklare med bakgrund inom UX UI-design och marknadsföring.",
         "Jag brinner för att kombinera design och teknik för att skapa digitala upplevelser som är vackra, funktionella och lite magiska ✨.",
         "Nyfikenhet och kreativitet driver mig att utforska, iterera och hitta glädje i varje bygge.",
         "Utanför kodningen hittar du mig ofta ute i naturen 🌱, i köket där jag provar nya recept 🍳, eller målande 🎨 — intressen som ger mig nya perspektiv och påminner mig om att alltid vara öppen och lekfull."
@@ -331,7 +331,7 @@ aboutDescription: [
       barWebsite: {
         name: "Bar webbdesign",
         coverImage: `${import.meta.env.BASE_URL}bar141.png`,
-        gifImage: `${import.meta.env.BASE_URL}bar-website.jpg`,
+        gifImage: `${import.meta.env.BASE_URL}bar-website.mp4`,
         tech: "HTML, CSS",
         description: "En modern, responsiv webbplats för en bar med sidor för hem, om oss, galleri och kontakt. Webbplatsen lyfter fram barens atmosfär, team och tjänster, och ger besökare en engagerande och informativ upplevelse.",
         fullDescription: {
