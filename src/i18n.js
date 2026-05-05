@@ -3,6 +3,7 @@ export const LANGUAGES = {
     // Navbar
     about: "About",
     projectsLabel: "Projects",
+    photography: "Photography",
     contact: "Contact",
     cv: "CV",
 
@@ -106,6 +107,37 @@ aboutDescription: [
       }
     },
 
+    // Photography
+    photographyTitle: "Photography",
+    photos: {
+      photo1: { image: `${import.meta.env.BASE_URL}photos/photo1.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo1.jpg` },
+      photo2: { image: `${import.meta.env.BASE_URL}photos/photo2.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo2.jpg` },
+      photo3: { image: `${import.meta.env.BASE_URL}photos/photo3.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo3.jpg` },
+      photo4: { image: `${import.meta.env.BASE_URL}photos/photo4.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo4.jpg` },
+      photo5: { image: `${import.meta.env.BASE_URL}photos/photo5.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo5.jpg` },
+      photo6: { image: `${import.meta.env.BASE_URL}photos/photo6.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo6.jpg` },
+      photo7: { image: `${import.meta.env.BASE_URL}photos/photo7.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo7.jpg` },
+      photo8: { image: `${import.meta.env.BASE_URL}photos/photo8.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo8.jpg` },
+      photo9: { image: `${import.meta.env.BASE_URL}photos/photo9.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo9.jpg` },
+      photo10: { image: `${import.meta.env.BASE_URL}photos/photo10.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo10.jpg` },
+      photo11: { image: `${import.meta.env.BASE_URL}photos/photo11.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo11.jpg` },
+      photo12: { image: `${import.meta.env.BASE_URL}photos/photo12.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo12.jpg` },
+      photo13: { image: `${import.meta.env.BASE_URL}photos/photo13.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo13.jpg` },
+      photo14: { image: `${import.meta.env.BASE_URL}photos/photo14.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo14.jpg` },
+      photo15: { image: `${import.meta.env.BASE_URL}photos/photo15.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo15.jpg` },
+      photo16: { image: `${import.meta.env.BASE_URL}photos/photo16.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo16.jpg` },
+      photo17: { image: `${import.meta.env.BASE_URL}photos/photo17.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo17.jpg` },
+      photo18: { image: `${import.meta.env.BASE_URL}photos/photo18.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo18.jpg` },
+      photo19: { image: `${import.meta.env.BASE_URL}photos/photo19.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo19.jpg` },
+      photo20: { image: `${import.meta.env.BASE_URL}photos/photo20.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo20.jpg` },
+      photo21: { image: `${import.meta.env.BASE_URL}photos/photo21.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo21.jpg` },
+      photo22: { image: `${import.meta.env.BASE_URL}photos/photo22.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo22.jpg` },
+      photo23: { image: `${import.meta.env.BASE_URL}photos/photo23.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo23.jpg` },
+      photo24: { image: `${import.meta.env.BASE_URL}photos/photo24.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo24.jpg` },
+      photo25: { image: `${import.meta.env.BASE_URL}photos/photo25.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo25.jpg` },
+      photo26: { image: `${import.meta.env.BASE_URL}photos/photo26.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo26.jpg` },
+    },
+
     // Contact
     letsConnect: "Let's Connect",
     connectMessage: "I enjoy connecting with people from all backgrounds. If you have ideas, want to collaborate, or just want to chat, my inbox is always open!",
@@ -122,6 +154,7 @@ aboutDescription: [
     // Navbar
     about: "关于",
     projectsLabel: "项目",
+    photography: "摄影作品",
     contact: "联系",
     cv: "简历",
 
@@ -225,6 +258,35 @@ aboutDescription: [
       }
     },
 
+    // Photography
+    photographyTitle: "摄影作品",
+    photos: {
+      photo1: { image: `${import.meta.env.BASE_URL}photos/photo1.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo1.jpg` },
+      photo2: { image: `${import.meta.env.BASE_URL}photos/photo2.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo2.jpg` },
+      photo3: { image: `${import.meta.env.BASE_URL}photos/photo3.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo3.jpg` },
+      photo4: { image: `${import.meta.env.BASE_URL}photos/photo4.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo4.jpg` },
+      photo5: { image: `${import.meta.env.BASE_URL}photos/photo5.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo5.jpg` },
+      photo6: { image: `${import.meta.env.BASE_URL}photos/photo6.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo6.jpg` },
+      photo7: { image: `${import.meta.env.BASE_URL}photos/photo7.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo7.jpg` },
+      photo8: { image: `${import.meta.env.BASE_URL}photos/photo8.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo8.jpg` },
+      photo9: { image: `${import.meta.env.BASE_URL}photos/photo9.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo9.jpg` },
+      photo10: { image: `${import.meta.env.BASE_URL}photos/photo10.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo10.jpg` },
+      photo11: { image: `${import.meta.env.BASE_URL}photos/photo11.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo11.jpg` },
+      photo12: { image: `${import.meta.env.BASE_URL}photos/photo12.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo12.jpg` },
+      photo13: { image: `${import.meta.env.BASE_URL}photos/photo13.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo13.jpg` },
+      photo14: { image: `${import.meta.env.BASE_URL}photos/photo14.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo14.jpg` },
+      photo15: { image: `${import.meta.env.BASE_URL}photos/photo15.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo15.jpg` },
+      photo16: { image: `${import.meta.env.BASE_URL}photos/photo16.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo16.jpg` },
+      photo17: { image: `${import.meta.env.BASE_URL}photos/photo17.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo17.jpg` },
+      photo18: { image: `${import.meta.env.BASE_URL}photos/photo18.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo18.jpg` },
+      photo19: { image: `${import.meta.env.BASE_URL}photos/photo19.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo19.jpg` },
+      photo20: { image: `${import.meta.env.BASE_URL}photos/photo20.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo20.jpg` },
+      photo21: { image: `${import.meta.env.BASE_URL}photos/photo21.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo21.jpg` },
+      photo22: { image: `${import.meta.env.BASE_URL}photos/photo22.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo22.jpg` },
+      photo23: { image: `${import.meta.env.BASE_URL}photos/photo23.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo23.jpg` },
+      photo24: { image: `${import.meta.env.BASE_URL}photos/photo24.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo24.jpg` }
+    },
+
     // Contact
     letsConnect: "联系我",
   connectMessage: "无论你来自什么领域，如果你有项目想法、想合作，或者只是想聊聊天，随时欢迎你来联系我！",
@@ -241,6 +303,7 @@ aboutDescription: [
     // Navbar
     about: "Om",
     projectsLabel: "Projekt",
+    photography: "Fotografi",
     contact: "Kontakt",
     cv: "CV",
 
@@ -342,6 +405,35 @@ aboutDescription: [
         viewLive: "https://yiting-zh.github.io/BarWebsite/",
         github: "https://github.com/Yiting-zh/BarWebsite"
       }
+    },
+
+    // Photography
+    photographyTitle: "Fotografi",
+    photos: {
+      photo1: { image: `${import.meta.env.BASE_URL}photos/photo1.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo1.jpg` },
+      photo2: { image: `${import.meta.env.BASE_URL}photos/photo2.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo2.jpg` },
+      photo3: { image: `${import.meta.env.BASE_URL}photos/photo3.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo3.jpg` },
+      photo4: { image: `${import.meta.env.BASE_URL}photos/photo4.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo4.jpg` },
+      photo5: { image: `${import.meta.env.BASE_URL}photos/photo5.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo5.jpg` },
+      photo6: { image: `${import.meta.env.BASE_URL}photos/photo6.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo6.jpg` },
+      photo7: { image: `${import.meta.env.BASE_URL}photos/photo7.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo7.jpg` },
+      photo8: { image: `${import.meta.env.BASE_URL}photos/photo8.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo8.jpg` },
+      photo9: { image: `${import.meta.env.BASE_URL}photos/photo9.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo9.jpg` },
+      photo10: { image: `${import.meta.env.BASE_URL}photos/photo10.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo10.jpg` },
+      photo11: { image: `${import.meta.env.BASE_URL}photos/photo11.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo11.jpg` },
+      photo12: { image: `${import.meta.env.BASE_URL}photos/photo12.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo12.jpg` },
+      photo13: { image: `${import.meta.env.BASE_URL}photos/photo13.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo13.jpg` },
+      photo14: { image: `${import.meta.env.BASE_URL}photos/photo14.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo14.jpg` },
+      photo15: { image: `${import.meta.env.BASE_URL}photos/photo15.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo15.jpg` },
+      photo16: { image: `${import.meta.env.BASE_URL}photos/photo16.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo16.jpg` },
+      photo17: { image: `${import.meta.env.BASE_URL}photos/photo17.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo17.jpg` },
+      photo18: { image: `${import.meta.env.BASE_URL}photos/photo18.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo18.jpg` },
+      photo19: { image: `${import.meta.env.BASE_URL}photos/photo19.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo19.jpg` },
+      photo20: { image: `${import.meta.env.BASE_URL}photos/photo20.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo20.jpg` },
+      photo21: { image: `${import.meta.env.BASE_URL}photos/photo21.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo21.jpg` },
+      photo22: { image: `${import.meta.env.BASE_URL}photos/photo22.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo22.jpg` },
+      photo23: { image: `${import.meta.env.BASE_URL}photos/photo23.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo23.jpg` },
+      photo24: { image: `${import.meta.env.BASE_URL}photos/photo24.jpg`, thumbnail: `${import.meta.env.BASE_URL}photos/photo24.jpg` }
     },
 
     // Contact

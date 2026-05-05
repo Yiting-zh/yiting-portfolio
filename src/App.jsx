@@ -8,6 +8,7 @@ import Loader from './Loader';
 // 懒加载非首屏组件
 const About = lazy(() => import('./Components/About'));
 const Projects = lazy(() => import('./Components/Projects'));
+const Photography = lazy(() => import('./Components/Photography'));
 const Contact = lazy(() => import('./Components/Contact'));
 const BackToTop = lazy(() => import('./Components/BackToTop'));
 
@@ -39,8 +40,14 @@ function App() {
           <Projects dict={LANGUAGES[lang]} />
           <About dict={LANGUAGES[lang]} />
           <Contact dict={LANGUAGES[lang]} />
+          <Photography dict={LANGUAGES[lang]} />
           <BackToTop />
         </Suspense>
+        <footer className="footer">
+          <p>
+            Created with <span role="img" aria-label="white heart">🤍</span> by Yiting Zhang © {new Date().getFullYear()}
+          </p>
+        </footer>
       </div>
     </>
   );

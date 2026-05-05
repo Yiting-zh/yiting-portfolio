@@ -32,11 +32,6 @@ const Contact = ({ dict }) => (
         </div>
       </div>
     </section>
-    <footer className="footer">
-      <p>
-        Created with <span role="img" aria-label="white heart">🤍</span> by Yiting Zhang © {new Date().getFullYear()}
-      </p>
-    </footer>
   </>
 );
 
