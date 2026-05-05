@@ -44,16 +44,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- 性能优化: 预加载关键资源 -->
-    <link rel="preload" as="image" href="/Hero.webp" fetchpriority="high">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Darumadrop+One" crossorigin>
+    <link rel="preload" as="image" href="/Hero.webp" fetchpriority="high" imageSrcset="/Hero.webp" imageSizes="100vw">
     
     <!-- 性能优化: 添加资源提示 -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    
     <!-- PWA 支持 -->
     <meta name="theme-color" content="#FEF9F1">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
   </head>
   <body>
